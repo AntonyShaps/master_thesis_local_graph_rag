@@ -42,8 +42,9 @@ def main():
         out_file = DATA_RAW_DIR / f"{name}.pdf"
         if out_file.exists():
             print(f"Already exists: {name}")
-        download_pdf(url, out_file)
-        print(f"Downloaded: {name}")
+        else:
+            download_pdf(url, out_file)
+            print(f"Downloaded: {name}")
     
 
 if __name__ == "__main__":
