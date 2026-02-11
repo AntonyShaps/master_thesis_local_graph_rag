@@ -2,15 +2,11 @@ from pathlib import Path
 import urllib.request
 import urllib.error
 
-from config import NVIDIA_SOURCE, GOOGLE_SOURCE, META_SOURCE
+from config import SOURCES
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DATA_RAW_DIR = SCRIPT_DIR.parent / "data" / "raw"
-SOURCES = {
-    "nvidia" : NVIDIA_SOURCE,
-    "google" : GOOGLE_SOURCE,
-    "meta" : META_SOURCE
-}
+
 
 def download_pdf(url: str, out_path: Path):
 
