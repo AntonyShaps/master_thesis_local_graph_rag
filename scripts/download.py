@@ -3,10 +3,7 @@ import urllib.request
 import urllib.error
 
 from config import SOURCES
-
-SCRIPT_DIR = Path(__file__).resolve().parent
-DATA_RAW_DIR = SCRIPT_DIR.parent / "data" / "raw"
-
+from paths import DATA_RAW_DIR
 
 def download_pdf(url: str, out_path: Path):
 
@@ -31,9 +28,12 @@ def download_pdf(url: str, out_path: Path):
         raise RuntimeError(f"URL error for {url}") from e
 
 def main():
-    DATA_RAW_DIR.mkdir(parents = True, exist_ok = True)
-    print(f"Created a dir if it has not existed yet")
-    
+    if not DATA_RAW_DIR.exists():
+        DATA_RAW_DIR.mkdir(parents = True)
+        print(f"Created directory: {DATA_RAW_DIR}")
+    else:
+        print(f"Directory already exists: {DATA_RAW_DIR}")
+        
     for name, url in SOURCES.items():
         out_file = DATA_RAW_DIR / f"{name}.pdf"
         if out_file.exists():
