@@ -3,8 +3,27 @@ name = "master-thesis-local-graph-rag"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
+    "accelerate>=1.12.0",
+    "flash-attn>=2.8.3",
+    "pillow>=12.1.1",
     "pymupdf==1.26.6",
+    "torch>=2.10.0",
+    "torchaudio>=2.10.0",
+    "torchvision>=0.25.0",
     "tqdm>=4.67.3",
+    "transformers>=5.1.0",
 ]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu130" }]
+torchvision = [{ index = "pytorch-cu130" }]
+torchaudio = [{ index = "pytorch-cu130" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+[tool.uv.extra-build-dependencies]
+flash-attn = ["torch"]
