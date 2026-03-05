@@ -1,10 +1,8 @@
-from paths import DATA_IMGS_DIR, DATA_MARKDOWN_DIR
+from paths import DATA_IMGS_DIR, DATA_MARKDOWN_DIR, MODELS_DIR
 import torch
-from pathlib import Path
 from PIL import Image
 from transformers import AutoTokenizer, AutoProcessor, AutoModelForImageTextToText
-import json
-model_path = "nanonets/Nanonets-OCR2-3B"
+model_path = MODELS_DIR / "Nanonets-OCR2-3B"
 model = AutoModelForImageTextToText.from_pretrained(
     model_path,
     dtype = "auto",
@@ -15,27 +13,26 @@ model = AutoModelForImageTextToText.from_pretrained(
 model.eval()
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 processor = AutoProcessor.from_pretrained(model_path)
-JSON_PROMPT_TEMPLATE = """
-Task:
-Extract all readable content from the image of a single report page.
 
-Rules:
-- Do NOT invent text. If something is not legible, use null and add a short note in "warnings".
-- Keep reading order: top-to-bottom, left-to-right.
-- Separate repetitive page furniture:
-  - Put running headers into blocks with type="header"
-  - Put footers/page numbers/legal lines into blocks with type="footer"
-- Preserve section hierarchy when obvious using "section_path" (list of headings encountered so far).
-- Tables:
-  - If you detect a table, output one block with type="table"
-  - Provide "html" AND a normalized "rows" 2D array
-  - Keep units in headers/cells
-- Figures:
-  - If there is an image/figure, create a block type="figure"
-  - If caption exists, copy it exactly into "caption"
- Checkboxes: use "☑" and "☐" in text.
-"""
-
+def ocr_page_with_nanonets_s(image_path, model, processor, max_new_tokens=4096):
+    prompt = """Extract the text from the above document as if you were reading it naturally. Return the tables in html format. Return the equations in LaTeX representation. If there is an image in the document and image caption is not present, add a small description of the image inside the <img></img> tag; otherwise, add the image caption inside <img></img>. Page numbers should be wrapped in brackets. Ex: <page_number>14</page_number>."""
+    image = Image.open(image_path)
+    messages = [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": [
+            {"type": "image", "image": f"{image_path}"},
+            {"type": "text", "text": prompt},
+        ]},
+    ]
+    text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    inputs = processor(text=[text], images=[image], padding=True, return_tensors="pt")
+    inputs = inputs.to(model.device)
+    
+    output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+    generated_ids = [output_ids[len(input_ids):] for input_ids, output_ids in zip(inputs.input_ids, output_ids)]
+    
+    output_text = processor.batch_decode(generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True)
+    return output_text[0]
 def ocr_page_nanonets(
     image: Image.Image,
     model,
@@ -96,5 +93,5 @@ if __name__ == "__main__":
             for image_path in sorted(company_dir.iterdir()):
                 print(f"  OCR: {image_path.name}")
                 image = Image.open(image_path)
-                result = ocr_page_nanonets(image,model,processor)
+                result = ocr_page_with_nanonets_s(image,model,processor)
                 f.write(result)
