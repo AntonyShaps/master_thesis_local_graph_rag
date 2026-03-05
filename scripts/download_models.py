@@ -12,17 +12,13 @@ MODELS: list[ModelSpec] = [
         ModelSpec(
             repo_id = "nanonets/Nanonets-OCR2-3B",
             local_dir = MODELS_DIR / "Nanonets-OCR2-3B",
+            ),
+      ModelSpec(
+            repo_id="mistralai/Mistral-7B-Instruct-v0.3",
+            local_dir = MODELS_DIR / "Mistral-7B-Instruct-v0.3",
             allow_patterns=["params.json",
                             "consolidated.safetensors",
                             "tokenizer.model.v3"]
-            ),
-        ModelSpec(
-            repo_id = "mistralai/Mistral-7B-v0.3",
-            local_dir = MODELS_DIR / "Mistral-7B-v0.3",
-            ),
-        ModelSpec(
-            repo_id ="lightonai/LightOnOCR-2-1B",
-            local_dir = MODELS_DIR / "LightOnOCR-2-1B"
             )
         ]
  
