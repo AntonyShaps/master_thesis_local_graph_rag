@@ -10,3 +10,8 @@ wheels/
 .venv
 data/
 models/
+.env.example
+*.docx
+*.pdf
+*.pptx
+

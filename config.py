@@ -7,3 +7,20 @@ SOURCES = {
     "google": GOOGLE_SOURCE,
     "meta": META_SOURCE
 }
+
+ENTITY_TYPES = [
+    "COMPANY",
+    "ORGANIZATION",
+    "FACILITY_ASSET",
+    "GEO",
+    "ESG_TOPIC",
+    "GOAL_TARGET",
+    "METRIC",
+    "PRODUCT_TECHNOLOGY",
+    "INITIATIVE_PROGRAM",
+    "PROJECT",
+    "STANDARD_FRAMEWORK",
+    "RESOURCE",
+    "PERSON",
+    "RISK_CHALLENGE"
+]
