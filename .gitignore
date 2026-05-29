@@ -8,10 +8,12 @@ wheels/
 
 # Virtual environments
 .venv
-data/
+data/*
+!data/eval/
+data/eval/*
+!data/eval/nvidia_gold_questions.jsonl
 models/
 .env.example
 *.docx
 *.pdf
 *.pptx
-

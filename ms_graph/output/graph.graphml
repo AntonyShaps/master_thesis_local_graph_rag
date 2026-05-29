@@ -1,0 +1,78 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="weight" attr.type="double" />
+  <graph edgedefault="undirected">
+    <node id="NVIDIA" />
+    <node id="5 MILLION U.S. HOMES" />
+    <node id="SBTI" />
+    <node id="SUSTAINABILITY INDICATORS" />
+    <node id="FY23 BASE YEAR" />
+    <node id="WATER WITHDRAWAL" />
+    <node id="GRI 303-3" />
+    <node id="SASB TC-SC-140A.1" />
+    <node id="PRODUCT ENVIRONMENTAL IMPACT" />
+    <node id="PRODUCT ENERGY EFFICIENCY" />
+    <node id="ENERGY-EFFICIENT OPERATIONS" />
+    <node id="PRODUCT VALUE CHAIN" />
+    <node id="SASB TC-SC-130A.1" />
+    <node id="SASB TC-SC-410A.2" />
+    <node id="GRI 306-3" />
+    <node id="UNGC E17" />
+    <node id="UNGC E18" />
+    <node id="SASB TC-SC-320A.1" />
+    <node id="SASB TC-SC-320A.2" />
+    <edge source="NVIDIA" target="5 MILLION U.S. HOMES">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SBTI">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SUSTAINABILITY INDICATORS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="FY23 BASE YEAR">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="NVIDIA" target="PRODUCT ENVIRONMENTAL IMPACT">
+      <data key="d0">17.0</data>
+    </edge>
+    <edge source="NVIDIA" target="PRODUCT ENERGY EFFICIENCY">
+      <data key="d0">17.0</data>
+    </edge>
+    <edge source="NVIDIA" target="ENERGY-EFFICIENT OPERATIONS">
+      <data key="d0">17.0</data>
+    </edge>
+    <edge source="NVIDIA" target="PRODUCT VALUE CHAIN">
+      <data key="d0">17.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SASB TC-SC-130A.1">
+      <data key="d0">18.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SASB TC-SC-410A.2">
+      <data key="d0">18.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SASB TC-SC-140A.1">
+      <data key="d0">18.0</data>
+    </edge>
+    <edge source="NVIDIA" target="GRI 306-3">
+      <data key="d0">6.0</data>
+    </edge>
+    <edge source="NVIDIA" target="UNGC E17">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="NVIDIA" target="UNGC E18">
+      <data key="d0">21.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SASB TC-SC-320A.1">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SASB TC-SC-320A.2">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="WATER WITHDRAWAL" target="GRI 303-3">
+      <data key="d0">6.0</data>
+    </edge>
+    <edge source="WATER WITHDRAWAL" target="SASB TC-SC-140A.1">
+      <data key="d0">1.0</data>
+    </edge>
+  </graph>
+</graphml>

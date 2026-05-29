@@ -1,0 +1,84 @@
+
+-Goal-
+Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
+
+-Quantitative Data Rules-
+1. Preserve all numbers exactly as written in the source text (no rounding, conversion, normalization, or inferred values).
+2. Preserve units and symbols exactly (for example: %, tCO2e, MWh, kWh, USD, million, billion, x, m3, PFLOP).
+3. Preserve period and scope for each value (for example: FY25, baseline year, scope 1/2/3, region, per-unit basis).
+4. For table-like text, treat each row as a separate fact and keep metric label + value + unit + period.
+5. If a value is missing, do not fabricate it.
+
+-Output Validity Rules-
+1. Emit each unique entity only once per extraction pass.
+2. Emit each unique relationship only once per extraction pass.
+3. Use the exact output format and delimiters.
+4. If nothing is found, output only <|COMPLETE|>.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, capitalized
+- entity_type: One of the following types: [{entity_types}]
+- entity_description: Comprehensive description of the entity's attributes and activities. Keep quantitative facts explicit in this compact form when available: metric=<metric>; value=<value>; unit=<unit_or_NONE>; period=<period_or_NONE>; scope=<scope_or_NONE>
+Format each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are clearly related.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation of why the source and target are related. Include quantitative evidence when present, preserving exact value, unit, and period.
+- relationship_strength: an integer score between 1 and 10 indicating strength of the relationship
+Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)
+
+3. Return output in English as a single list of all entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
+
+4. If you must translate into English, translate descriptions only.
+
+5. When finished, output <|COMPLETE|>.
+
+-Examples-
+######################
+Example 1:
+
+entity_types: [company, target, metric, time_period, framework]
+text:
+NVIDIA committed from a FY23 base year to reduce absolute scope 1 and 2 emissions 50% by FY30. NVIDIA also targets a 75% reduction in scope 3 emissions intensity per PFLOP by FY30. The targets were validated by SBTi for 1.5C alignment.
+------------------------
+output:
+("entity"<|>NVIDIA<|>COMPANY<|>NVIDIA has climate targets; metric=scope 1 and 2 emissions reduction; value=50%; unit=%; period=FY30; scope=scope 1 and 2; metric=scope 3 emissions intensity reduction; value=75%; unit=% per PFLOP; period=FY30; scope=scope 3)
+##
+("entity"<|>FY23 BASE YEAR<|>TIME_PERIOD<|>Baseline year used for target tracking; metric=baseline year; value=FY23; unit=NONE; period=FY23; scope=NONE)
+##
+("entity"<|>SBTI<|>FRAMEWORK<|>Science Based Targets initiative validating climate targets; metric=temperature alignment; value=1.5; unit=C; period=NONE; scope=NONE)
+##
+("relationship"<|>NVIDIA<|>FY23 BASE YEAR<|>NVIDIA defines FY23 as the baseline year for emissions targets; value=FY23; unit=NONE; period=FY23<|>8)
+##
+("relationship"<|>NVIDIA<|>SBTI<|>NVIDIA states that SBTi validated its targets with 1.5C alignment; value=1.5; unit=C; period=NONE<|>7)
+<|COMPLETE|>
+#############################
+
+Example 2:
+
+entity_types: [company, metric, standard, time_period]
+text:
+Water withdrawal was 409,814 m3 in FY25, 382,636 m3 in FY24, and 376,656 m3 in FY23. Reference indicators include GRI 303-3 and SASB TC-SC-140a.1.
+------------------------
+output:
+("entity"<|>WATER WITHDRAWAL<|>METRIC<|>Water withdrawal values are reported by fiscal year; metric=water withdrawal; value=409,814; unit=m3; period=FY25; scope=NONE; metric=water withdrawal; value=382,636; unit=m3; period=FY24; scope=NONE; metric=water withdrawal; value=376,656; unit=m3; period=FY23; scope=NONE)
+##
+("entity"<|>GRI 303-3<|>STANDARD<|>Reporting indicator used for water disclosure; metric=reference indicator; value=GRI 303-3; unit=NONE; period=NONE; scope=NONE)
+##
+("entity"<|>SASB TC-SC-140A.1<|>STANDARD<|>Reporting indicator used for water disclosure; metric=reference indicator; value=SASB TC-SC-140a.1; unit=NONE; period=NONE; scope=NONE)
+##
+("relationship"<|>WATER WITHDRAWAL<|>GRI 303-3<|>Water withdrawal is reported under GRI 303-3 with FY25/FY24/FY23 values preserved<|>6)
+##
+("relationship"<|>WATER WITHDRAWAL<|>SASB TC-SC-140A.1<|>Water withdrawal is reported with SASB TC-SC-140a.1 as a reference indicator<|>6)
+<|COMPLETE|>
+#############################
+
+-Real Data-
+######################
+entity_types: [{entity_types}]
+text: {input_text}
+######################
+output:

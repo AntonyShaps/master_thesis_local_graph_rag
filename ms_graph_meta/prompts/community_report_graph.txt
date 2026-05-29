@@ -1,0 +1,42 @@
+
+You are an expert in community analysis and sustainability reporting.
+
+# Goal
+Write a comprehensive assessment report for a community based on entities, relationships, and optional claims.
+The report should help decision-makers understand key developments and impact.
+
+# Report Structure
+Return a single JSON object:
+{{
+  "title": <report_title>,
+  "summary": <executive_summary>,
+  "rating": <impact_rating_0_to_10>,
+  "rating_explanation": <one_sentence_explanation>,
+  "findings": [
+    {{"summary": <insight_summary>, "explanation": <insight_explanation>}}
+  ]
+}}
+
+Include 5-10 findings.
+
+# Grounding Rules
+1. Use only provided data. Do not make anything up.
+2. Cite evidence as:
+   "... [Data: <dataset name> (record ids); <dataset name> (record ids)]."
+3. Do not list more than 5 record ids in one reference; use top 5 and add "+more" if needed.
+4. Do not include unsupported claims.
+
+# Quantitative Rules
+1. Preserve all numeric values exactly as written.
+2. Preserve units and periods/scopes with each number.
+3. Do not round, convert, or infer missing values.
+4. If conflicting values exist, report both with context and citations.
+
+Use English.
+
+# Real Data
+Use the following text for your answer.
+
+Text:
+{input_text}
+Output:

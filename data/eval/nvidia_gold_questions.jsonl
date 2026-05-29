@@ -1,0 +1,10 @@
+{"id":"NVID-F01","type":"Factual","question":"What is NVIDIA's main sustainability governance committee at the Board level?","gold_answer":"The Nominating and Corporate Governance Committee reviews and discusses sustainability policies, issues, reporting, strategy, risks, opportunities, and related programs."}
+{"id":"NVID-F02","type":"Factual","question":"Which frameworks does NVIDIA use to determine sustainability topics for reporting?","gold_answer":"GRI, SASB, TCFD, and the U.N. Sustainable Development Goals."}
+{"id":"NVID-F03","type":"Factual","question":"What is NVIDIA Earth-2 used for?","gold_answer":"It is used for AI-driven global weather and climate simulations, including improved extreme weather prediction and climate resilience."}
+{"id":"NVID-F04","type":"Factual","question":"What responsible minerals goal does NVIDIA state for 3TG minerals?","gold_answer":"NVIDIA aims to use only conflict-free gold, tantalum, tungsten, and tin and to achieve 100% RMAP-compliant 3TG processing facilities."}
+{"id":"NVID-F05","type":"Factual","question":"What are NVIDIA's Trustworthy AI principles intended to ensure?","gold_answer":"AI models should comply with privacy and data protection laws, perform safely and as intended, communicate transparently about design and limitations, and minimize unwanted bias."}
+{"id":"NVID-N01","type":"Numeric","question":"What percentage of renewable electricity did NVIDIA achieve in FY25 for offices and data centers under operational control?","gold_answer":"100%."}
+{"id":"NVID-N02","type":"Numeric","question":"What were NVIDIA's FY25 Scope 1 emissions?","gold_answer":"12,952 MT CO2e."}
+{"id":"NVID-N03","type":"Numeric","question":"What were NVIDIA's FY25 Scope 3 emissions?","gold_answer":"6,912,577 MT CO2e."}
+{"id":"NVID-N04","type":"Numeric","question":"What percentage of NVIDIA's Scope 3 category 1 emissions was covered by supplier engagement in FY25?","gold_answer":"Over 80%."}
+{"id":"NVID-N05","type":"Numeric","question":"What was NVIDIA's FY25 landfill diversion rate?","gold_answer":"84%."}

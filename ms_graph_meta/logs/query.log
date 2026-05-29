@@ -1,0 +1,2075 @@
+2026-05-24 14:59:47.0376 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 2,
+  "successful_response_count": 2,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 3.1390419006347656,
+  "compute_duration_per_response_seconds": 3.1390419006347656,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 4563,
+  "completion_tokens": 469,
+  "total_tokens": 5032,
+  "tokens_per_response": 5032.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:02:58.0911 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 2,
+  "successful_response_count": 2,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 3.261216402053833,
+  "compute_duration_per_response_seconds": 3.261216402053833,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 4564,
+  "completion_tokens": 450,
+  "total_tokens": 5014,
+  "tokens_per_response": 5014.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:03:41.0069 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18567132949829102,
+  "compute_duration_per_response_seconds": 0.18567132949829102,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 4,
+  "total_tokens": 4,
+  "tokens_per_response": 4.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:03:41.0069 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:04:01.0344 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 2,
+  "successful_response_count": 2,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 3.2370777130126953,
+  "compute_duration_per_response_seconds": 3.2370777130126953,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 4564,
+  "completion_tokens": 393,
+  "total_tokens": 4957,
+  "tokens_per_response": 4957.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:04:20.0484 - WARNING - graphrag.query.structured_search.global_search.search - Warning: All map responses have score 0 (i.e., no relevant information found from the dataset), returning a canned 'I do not know' answer. You can try enabling `allow_general_knowledge` to encourage the LLM to incorporate relevant general knowledge, at the risk of increasing hallucinations.
+2026-05-24 15:04:20.0484 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 1.4602375030517578,
+  "compute_duration_per_response_seconds": 1.4602375030517578,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 4565,
+  "completion_tokens": 94,
+  "total_tokens": 4659,
+  "tokens_per_response": 4659.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:04:34.0903 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18787670135498047,
+  "compute_duration_per_response_seconds": 0.18787670135498047,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 5,
+  "total_tokens": 5,
+  "tokens_per_response": 5.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:04:34.0903 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:05:07.0868 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:07.0893 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:07.0918 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:07.0941 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:07.0973 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0004 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0028 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0052 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0077 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0101 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0126 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0154 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0180 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0209 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0233 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0258 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0282 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0307 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0331 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:08.0357 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:05:10.0872 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What environmental impact frameworks does NVIDIA align with?
+2026-05-24 15:05:10.0872 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:05:14.0205 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: Which organizations does NVIDIA collaborate with for environmental and social responsibility?
+2026-05-24 15:05:14.0205 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:05:18.0965 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is NVIDIA's commitment to reducing carbon emissions?
+2026-05-24 15:05:18.0965 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:05:28.0531 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the role of the Conflict Minerals Reporting Authority (RBA) in NVIDIA's operations?
+2026-05-24 15:05:28.0531 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:05:29.0808 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: Which entities are related to NVIDIA in the context of data center sustainability?
+2026-05-24 15:05:29.0808 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:05:47.0191 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: Can you provide details about NVIDIA's sustainability initiatives?
+2026-05-24 15:05:47.0191 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:05:55.0386 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is NVIDIA's environmental impact assessment report?
+2026-05-24 15:05:55.0386 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:06:00.0313 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What organizations has NVIDIA partnered with for environmental sustainability?
+2026-05-24 15:06:00.0313 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:06:06.0401 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: How does NVIDIA ensure the ethical sourcing of resources used in its products?
+2026-05-24 15:06:06.0401 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:07:35.0198 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What are the key energy resources used by data centers, and how does fuel contribute to them?
+2026-05-24 15:07:35.0198 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:07:51.0706 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is NVIDIA's energy consumption per data center?
+2026-05-24 15:07:51.0706 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:07:51.0707 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: Which organizations does NVIDIA collaborate with for environmental and social responsibility?
+2026-05-24 15:07:51.0707 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What organizations has NVIDIA partnered with for environmental sustainability?
+2026-05-24 15:07:51.0707 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: How does NVIDIA ensure the ethical sourcing of resources used in its products?
+2026-05-24 15:07:51.0708 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is NVIDIA's environmental impact assessment report?
+2026-05-24 15:07:51.0708 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the role of the Conflict Minerals Reporting Authority (RBA) in NVIDIA's operations?
+2026-05-24 15:07:51.0708 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: Which entities are related to NVIDIA in the context of data center sustainability?
+2026-05-24 15:07:51.0708 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What environmental impact frameworks does NVIDIA align with?
+2026-05-24 15:07:51.0708 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is NVIDIA's commitment to reducing carbon emissions?
+2026-05-24 15:07:51.0708 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What are the key energy resources used by data centers, and how does fuel contribute to them?
+2026-05-24 15:07:51.0708 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is NVIDIA's energy consumption per data center?
+2026-05-24 15:07:51.0709 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: Can you provide details about NVIDIA's sustainability initiatives?
+2026-05-24 15:07:51.0735 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0758 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0782 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0805 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0828 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0852 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0877 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0902 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0928 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0954 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:51.0979 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0004 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0029 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0053 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0078 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0104 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0130 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0154 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0179 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:52.0205 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:07:55.0275 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the role of the PPA in promoting conflict-free supply chains in the Democratic Republic of Congo?
+2026-05-24 15:07:55.0275 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:08:00.0067 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the company's stance on climate change and how does it align with global sustainability frameworks?
+2026-05-24 15:08:00.0067 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:08:03.0679 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: How does NVIDIA address the issue of forced labor in their supply chain?
+2026-05-24 15:08:03.0679 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:08:09.0917 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the role of the Conflict Minerals Reporting Authority (RBA) in validating NVIDIA's supply chain?
+2026-05-24 15:08:09.0917 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:08:11.0337 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the role of NVIDIA's Sustainability Indicators in tracking emissions?
+2026-05-24 15:08:11.0338 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:08:29.0012 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the role of the Responsible Minerals Assurance Process (RMAP) in NVIDIA's supply chain?
+2026-05-24 15:08:29.0012 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:09:53.0004 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the total number of employees at NVIDIA?
+2026-05-24 15:09:53.0004 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:09:56.0319 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the company's strategy for achieving 100% Responsible Minerals Assurance Process-compliant 3TG processing facilities?
+2026-05-24 15:09:56.0319 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:00.0105 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: How does NVIDIA's use of data centers affect its overall carbon footprint?
+2026-05-24 15:10:00.0105 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:08.0488 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the significance of NVIDIA's participation in the Public Private Alliance (PPA)?
+2026-05-24 15:10:08.0488 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:13.0505 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: How does NVIDIA's sustainability framework integrate with its corporate governance and ethical business practices?
+2026-05-24 15:10:13.0505 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:19.0262 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: How does NVIDIA ensure that their supply chain is transparent and socially responsible?
+2026-05-24 15:10:19.0262 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:26.0114 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: How does NVIDIA's renewable electricity usage compare to other major tech companies in terms of environmental impact?
+2026-05-24 15:10:26.0114 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:26.0115 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the company's stance on climate change and how does it align with global sustainability frameworks?
+2026-05-24 15:10:26.0115 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the significance of NVIDIA's participation in the Public Private Alliance (PPA)?
+2026-05-24 15:10:26.0115 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the role of the Conflict Minerals Reporting Authority (RBA) in validating NVIDIA's supply chain?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the role of NVIDIA's Sustainability Indicators in tracking emissions?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: How does NVIDIA's renewable electricity usage compare to other major tech companies in terms of environmental impact?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the company's strategy for achieving 100% Responsible Minerals Assurance Process-compliant 3TG processing facilities?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: How does NVIDIA's sustainability framework integrate with its corporate governance and ethical business practices?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: How does NVIDIA's use of data centers affect its overall carbon footprint?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: How does NVIDIA address the issue of forced labor in their supply chain?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the role of the Responsible Minerals Assurance Process (RMAP) in NVIDIA's supply chain?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the total number of employees at NVIDIA?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the role of the PPA in promoting conflict-free supply chains in the Democratic Republic of Congo?
+2026-05-24 15:10:26.0116 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: How does NVIDIA ensure that their supply chain is transparent and socially responsible?
+2026-05-24 15:10:26.0142 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0170 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0195 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0220 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0245 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0271 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0294 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0319 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0346 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0372 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0398 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0422 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0448 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0473 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0497 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0524 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0549 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0575 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0601 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:26.0625 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2026-05-24 15:10:29.0328 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: Which organizations does NVIDIA collaborate with for environmental and social responsibility?
+2026-05-24 15:10:29.0328 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:35.0089 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the significance of NVIDIA's alignment with the London Bullion Market Association (LBMA) in its sustainability efforts?
+2026-05-24 15:10:35.0089 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:36.0353 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the purpose of NVIDIA's employee stock purchase program?
+2026-05-24 15:10:36.0353 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:10:57.0766 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: How does NVIDIA's collaboration with organizations like B.ORG and ProWoman support environmental sustainability?
+2026-05-24 15:10:57.0766 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:16.0846 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the total number of employees at NVIDIA?
+2026-05-24 15:12:16.0846 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:18.0872 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the scope of NVIDIA's conflict minerals reporting under the RBA?
+2026-05-24 15:12:18.0873 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:20.0822 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the role of the Responsible Jewelry Council (RJC) in NVIDIA's operations?
+2026-05-24 15:12:20.0822 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:26.0036 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the significance of the OECD Due Diligence Guidance in NVIDIA's responsible sourcing practices?
+2026-05-24 15:12:26.0036 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:30.0305 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: Does NVIDIA have a dedicated team for emissions data collection and reporting?
+2026-05-24 15:12:30.0305 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:38.0083 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: What is the role of NVIDIA's Sustainability Indicators framework in tracking and reducing its environmental impact?
+2026-05-24 15:12:38.0083 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:47.0678 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: Are there any external sustainability rating organizations that have evaluated NVIDIA's emissions?
+2026-05-24 15:12:47.0678 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:48.0929 - WARNING - graphrag.query.structured_search.drift_search.action - No answer found for query: Which entities are related to NVIDIA in the context of data center sustainability?
+2026-05-24 15:12:48.0929 - WARNING - graphrag.query.structured_search.drift_search.action - No follow-up actions found for response: {}
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: How does NVIDIA's collaboration with organizations like B.ORG and ProWoman support environmental sustainability?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: Are there any external sustainability rating organizations that have evaluated NVIDIA's emissions?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the scope of NVIDIA's conflict minerals reporting under the RBA?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the role of NVIDIA's Sustainability Indicators framework in tracking and reducing its environmental impact?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the role of the Responsible Jewelry Council (RJC) in NVIDIA's operations?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: Which organizations does NVIDIA collaborate with for environmental and social responsibility?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the total number of employees at NVIDIA?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the significance of NVIDIA's alignment with the London Bullion Market Association (LBMA) in its sustainability efforts?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the purpose of NVIDIA's employee stock purchase program?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: Which entities are related to NVIDIA in the context of data center sustainability?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: What is the significance of the OECD Due Diligence Guidance in NVIDIA's responsible sourcing practices?
+2026-05-24 15:12:51.0454 - WARNING - graphrag.query.structured_search.drift_search.state - No follow-up actions for action: Does NVIDIA have a dedicated team for emissions data collection and reporting?
+2026-05-24 15:12:54.0919 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 61,
+  "successful_response_count": 61,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.5426464080810547,
+  "compute_duration_per_response_seconds": 0.008895842755427126,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 61,
+  "prompt_tokens": 1803,
+  "total_tokens": 1803,
+  "tokens_per_response": 29.557377049180328,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:12:54.0919 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 67,
+  "successful_response_count": 67,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 26.1867573261261,
+  "compute_duration_per_response_seconds": 4.36445955435435,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 61,
+  "responses_with_tokens": 6,
+  "prompt_tokens": 6841,
+  "completion_tokens": 2627,
+  "total_tokens": 9468,
+  "tokens_per_response": 1578.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:14:08.0064 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.16721749305725098,
+  "compute_duration_per_response_seconds": 0.16721749305725098,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 5,
+  "total_tokens": 5,
+  "tokens_per_response": 5.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 15:14:08.0064 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 18:24:59.0256 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.7528760433197021,
+  "compute_duration_per_response_seconds": 0.7528760433197021,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 5,
+  "total_tokens": 5,
+  "tokens_per_response": 5.0,
+  "cost_per_response": 0.0
+}
+2026-05-24 18:24:59.0256 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 08:54:10.0341 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.7760360240936279,
+  "compute_duration_per_response_seconds": 0.7760360240936279,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 5,
+  "total_tokens": 5,
+  "tokens_per_response": 5.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 08:54:10.0341 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 08:56:22.0647 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.24141144752502441,
+  "compute_duration_per_response_seconds": 0.24141144752502441,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 8,
+  "total_tokens": 8,
+  "tokens_per_response": 8.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 08:56:22.0647 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 08:57:35.0672 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 2,
+  "successful_response_count": 2,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 3.5604000091552734,
+  "compute_duration_per_response_seconds": 3.5604000091552734,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 2543,
+  "completion_tokens": 421,
+  "total_tokens": 2964,
+  "tokens_per_response": 2964.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 08:59:19.0347 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 2,
+  "successful_response_count": 2,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 1.5880916118621826,
+  "compute_duration_per_response_seconds": 1.5880916118621826,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 2544,
+  "completion_tokens": 276,
+  "total_tokens": 2820,
+  "tokens_per_response": 2820.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 17:57:29.0402 - WARNING - graphrag.query.structured_search.global_search.search - Warning: All map responses have score 0 (i.e., no relevant information found from the dataset), returning a canned 'I do not know' answer. You can try enabling `allow_general_knowledge` to encourage the LLM to incorporate relevant general knowledge, at the risk of increasing hallucinations.
+2026-05-25 17:57:29.0403 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.4575817584991455,
+  "compute_duration_per_response_seconds": 0.4575817584991455,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 2542,
+  "completion_tokens": 26,
+  "total_tokens": 2568,
+  "tokens_per_response": 2568.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 17:57:45.0228 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1790459156036377,
+  "compute_duration_per_response_seconds": 0.1790459156036377,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 6,
+  "total_tokens": 6,
+  "tokens_per_response": 6.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 17:57:45.0228 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 17:58:02.0886 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.17021870613098145,
+  "compute_duration_per_response_seconds": 0.17021870613098145,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 6,
+  "total_tokens": 6,
+  "tokens_per_response": 6.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 17:58:02.0886 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 18:06:03.0006 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.24111056327819824,
+  "compute_duration_per_response_seconds": 0.24111056327819824,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 9,
+  "total_tokens": 9,
+  "tokens_per_response": 9.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 18:06:03.0007 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-25 18:07:23.0470 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 2,
+  "successful_response_count": 2,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 3.720200300216675,
+  "compute_duration_per_response_seconds": 3.720200300216675,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 2546,
+  "completion_tokens": 530,
+  "total_tokens": 3076,
+  "tokens_per_response": 3076.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:26:47.0364 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.6204166412353516,
+  "compute_duration_per_response_seconds": 0.6204166412353516,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 18,
+  "total_tokens": 18,
+  "tokens_per_response": 18.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:26:47.0365 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:41:45.0516 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.2572939395904541,
+  "compute_duration_per_response_seconds": 0.2572939395904541,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 18,
+  "total_tokens": 18,
+  "tokens_per_response": 18.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:41:45.0516 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:24.0748 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1799476146697998,
+  "compute_duration_per_response_seconds": 0.1799476146697998,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 11,
+  "total_tokens": 11,
+  "tokens_per_response": 11.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:24.0748 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:32.0883 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1796560287475586,
+  "compute_duration_per_response_seconds": 0.1796560287475586,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 11,
+  "total_tokens": 11,
+  "tokens_per_response": 11.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:32.0883 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:40.0029 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.35619091987609863,
+  "compute_duration_per_response_seconds": 0.35619091987609863,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 6,
+  "total_tokens": 6,
+  "tokens_per_response": 6.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:40.0029 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:47.0036 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.17542243003845215,
+  "compute_duration_per_response_seconds": 0.17542243003845215,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 10,
+  "total_tokens": 10,
+  "tokens_per_response": 10.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:47.0036 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:54.0494 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1853487491607666,
+  "compute_duration_per_response_seconds": 0.1853487491607666,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 9,
+  "total_tokens": 9,
+  "tokens_per_response": 9.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:54.0494 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:59.0920 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18053650856018066,
+  "compute_duration_per_response_seconds": 0.18053650856018066,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 18,
+  "total_tokens": 18,
+  "tokens_per_response": 18.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:42:59.0920 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:43:07.0046 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18555450439453125,
+  "compute_duration_per_response_seconds": 0.18555450439453125,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:43:07.0046 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:43:11.0834 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.177764892578125,
+  "compute_duration_per_response_seconds": 0.177764892578125,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:43:11.0835 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:43:18.0970 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.2075965404510498,
+  "compute_duration_per_response_seconds": 0.2075965404510498,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 16,
+  "total_tokens": 16,
+  "tokens_per_response": 16.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:43:18.0970 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:43:26.0287 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.19045591354370117,
+  "compute_duration_per_response_seconds": 0.19045591354370117,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:43:26.0287 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:44:35.0093 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.17965054512023926,
+  "compute_duration_per_response_seconds": 0.17965054512023926,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 11,
+  "total_tokens": 11,
+  "tokens_per_response": 11.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:44:35.0093 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:44:42.0988 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18446016311645508,
+  "compute_duration_per_response_seconds": 0.18446016311645508,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 11,
+  "total_tokens": 11,
+  "tokens_per_response": 11.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:44:42.0988 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:44:50.0083 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.185316801071167,
+  "compute_duration_per_response_seconds": 0.185316801071167,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 6,
+  "total_tokens": 6,
+  "tokens_per_response": 6.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:44:50.0084 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:44:57.0177 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1804823875427246,
+  "compute_duration_per_response_seconds": 0.1804823875427246,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 10,
+  "total_tokens": 10,
+  "tokens_per_response": 10.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:44:57.0177 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:04.0704 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18031740188598633,
+  "compute_duration_per_response_seconds": 0.18031740188598633,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 9,
+  "total_tokens": 9,
+  "tokens_per_response": 9.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:04.0704 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:11.0686 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.16811609268188477,
+  "compute_duration_per_response_seconds": 0.16811609268188477,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 18,
+  "total_tokens": 18,
+  "tokens_per_response": 18.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:11.0687 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:19.0069 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1767578125,
+  "compute_duration_per_response_seconds": 0.1767578125,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:19.0069 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:24.0362 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18130850791931152,
+  "compute_duration_per_response_seconds": 0.18130850791931152,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:24.0362 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:31.0493 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18014788627624512,
+  "compute_duration_per_response_seconds": 0.18014788627624512,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 16,
+  "total_tokens": 16,
+  "tokens_per_response": 16.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:31.0493 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:38.0731 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1803908348083496,
+  "compute_duration_per_response_seconds": 0.1803908348083496,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:45:38.0731 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:46:41.0745 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1827707290649414,
+  "compute_duration_per_response_seconds": 0.1827707290649414,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 11,
+  "total_tokens": 11,
+  "tokens_per_response": 11.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:46:41.0745 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:46:49.0613 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18248343467712402,
+  "compute_duration_per_response_seconds": 0.18248343467712402,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 11,
+  "total_tokens": 11,
+  "tokens_per_response": 11.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:46:49.0613 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:46:56.0773 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.17675375938415527,
+  "compute_duration_per_response_seconds": 0.17675375938415527,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 6,
+  "total_tokens": 6,
+  "tokens_per_response": 6.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:46:56.0773 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:03.0794 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18450427055358887,
+  "compute_duration_per_response_seconds": 0.18450427055358887,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 10,
+  "total_tokens": 10,
+  "tokens_per_response": 10.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:03.0794 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:10.0838 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.17134737968444824,
+  "compute_duration_per_response_seconds": 0.17134737968444824,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 9,
+  "total_tokens": 9,
+  "tokens_per_response": 9.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:10.0838 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:17.0954 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18121600151062012,
+  "compute_duration_per_response_seconds": 0.18121600151062012,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 18,
+  "total_tokens": 18,
+  "tokens_per_response": 18.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:17.0955 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:28.0081 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.16972112655639648,
+  "compute_duration_per_response_seconds": 0.16972112655639648,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:28.0081 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:32.0874 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1677548885345459,
+  "compute_duration_per_response_seconds": 0.1677548885345459,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:32.0874 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:39.0878 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.16224098205566406,
+  "compute_duration_per_response_seconds": 0.16224098205566406,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 16,
+  "total_tokens": 16,
+  "tokens_per_response": 16.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:39.0878 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:47.0144 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.17969989776611328,
+  "compute_duration_per_response_seconds": 0.17969989776611328,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:47:47.0144 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:48:31.0354 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18066930770874023,
+  "compute_duration_per_response_seconds": 0.18066930770874023,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 11,
+  "total_tokens": 11,
+  "tokens_per_response": 11.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:48:31.0355 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:48:44.0124 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.21422386169433594,
+  "compute_duration_per_response_seconds": 0.21422386169433594,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 11,
+  "total_tokens": 11,
+  "tokens_per_response": 11.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:48:44.0124 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:48:51.0192 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1683976650238037,
+  "compute_duration_per_response_seconds": 0.1683976650238037,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 6,
+  "total_tokens": 6,
+  "tokens_per_response": 6.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:48:51.0193 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:48:58.0325 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1761171817779541,
+  "compute_duration_per_response_seconds": 0.1761171817779541,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 10,
+  "total_tokens": 10,
+  "tokens_per_response": 10.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:48:58.0325 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:05.0762 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.1645197868347168,
+  "compute_duration_per_response_seconds": 0.1645197868347168,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 9,
+  "total_tokens": 9,
+  "tokens_per_response": 9.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:05.0762 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:12.0727 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.17503595352172852,
+  "compute_duration_per_response_seconds": 0.17503595352172852,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 18,
+  "total_tokens": 18,
+  "tokens_per_response": 18.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:12.0728 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:19.0736 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.17942428588867188,
+  "compute_duration_per_response_seconds": 0.17942428588867188,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:19.0736 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:25.0027 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.18546581268310547,
+  "compute_duration_per_response_seconds": 0.18546581268310547,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:25.0027 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:32.0075 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.16192030906677246,
+  "compute_duration_per_response_seconds": 0.16192030906677246,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 16,
+  "total_tokens": 16,
+  "tokens_per_response": 16.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:32.0075 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:39.0112 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.16138911247253418,
+  "compute_duration_per_response_seconds": 0.16138911247253418,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 7,
+  "total_tokens": 7,
+  "tokens_per_response": 7.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 10:49:39.0113 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 11:41:55.0383 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/BAAI/bge-base-en-v1.5: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0.2804601192474365,
+  "compute_duration_per_response_seconds": 0.2804601192474365,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 18,
+  "total_tokens": 18,
+  "tokens_per_response": 18.0,
+  "cost_per_response": 0.0
+}
+2026-05-29 11:41:55.0383 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/bonsai-local: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}

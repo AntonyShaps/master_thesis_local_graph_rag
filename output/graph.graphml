@@ -1,0 +1,470 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="weight" attr.type="double" />
+  <graph edgedefault="undirected">
+    <node id="FUEL" />
+    <node id="PURCHASED ELECTRICITY" />
+    <node id="PURCHASED HEAT" />
+    <node id="PURCHASED STEAM" />
+    <node id="PURCHASED COOLING" />
+    <node id="ON-SITE RENEWABLE ELECTRICITY" />
+    <node id="TOTAL ENERGY CONSUMPTION" />
+    <node id="DATA CENTER" />
+    <node id="WATER" />
+    <node id="SOLAR POWER PLANTS" />
+    <node id="WIND POWER PLANTS" />
+    <node id="CORPORATE WATER STAKEHOLDER" />
+    <node id="ENERGY STORAGE" />
+    <node id="GEOTHERMAL POWER" />
+    <node id="SOLAR ENERGY" />
+    <node id="WIND ENERGY" />
+    <node id="ENERGY CONSUMPTION" />
+    <node id="AI" />
+    <node id="PROFIT" />
+    <node id="SUSTAINABILITY REPORT" />
+    <node id="GREEN LIGHT" />
+    <node id="DISASTER RESPONSE" />
+    <node id="META EARTH PRO" />
+    <node id="CLEAN ENERGY" />
+    <node id="RENEWABLE ENERGY" />
+    <node id="ENERGY SYSTEMS" />
+    <node id="CLEAN ENERGY PURCHASES" />
+    <node id="RESOURCE" />
+    <node id="REVERSE SUPPLY CHAIN PROGRAM" />
+    <node id="SOLAR API" />
+    <node id="GLOBAL OPERATIONAL WATER USE" />
+    <node id="WASTE" />
+    <node id="RECYCLING" />
+    <node id="DISPOSAL" />
+    <node id="WASTE DIVERSION RATE" />
+    <node id="RECYCLING RATE" />
+    <node id="DISPOSAL RATE" />
+    <node id="WASTE GENERATION" />
+    <node id="WASTE REDUCTION" />
+    <node id="WASTE DIVERSION" />
+    <node id="WASTE MANAGEMENT" />
+    <node id="TOTAL OPERATIONAL (SCOPE 1 + MARKET-BASED SCOPE 2) EMISSIONS" />
+    <node id="SCOPE 2 (MARKET-BASED)" />
+    <node id="SOLAR POWER" />
+    <node id="WIND POWER" />
+    <node id="ON-SITE RENEWABLE ENERGY" />
+    <node id="UNIT" />
+    <node id="PUE" />
+    <node id="ALPHABET" />
+    <node id="REFRIGERANT LEAKAGE" />
+    <node id="GWP" />
+    <node id="DATA CENTERS" />
+    <node id="POWER PURCHASE AGREEMENTS" />
+    <node id="ENERGY MIX" />
+    <node id="SOLAR" />
+    <node id="WIND" />
+    <node id="COPPER" />
+    <node id="ALTERNATIVE ENERGY SOURCES" />
+    <node id="ON-SITE IRRIGATION WATER WITHDRAWAL" />
+    <node id="IRRIGATION WATER WITHDRAWAL" />
+    <node id="ISO 50001" />
+    <node id="ISO 14001" />
+    <node id="CLIMATE NEUTRAL DATA&lt;BR&gt;CENTRE PACT (CNDCP)" />
+    <node id="EU CODE OF CONDUCT&lt;BR&gt;ON DATA CENTRE ENERGY&lt;BR&gt;EFFICIENCY" />
+    <node id="LEED" />
+    <node id="NVIDIA" />
+    <node id="GPU" />
+    <node id="CUDA" />
+    <node id="MELLANOX" />
+    <node id="RESEARCH AND DEVELOPMENT" />
+    <node id="GPU ACCELERATION" />
+    <node id="PHYSICAL SIMULATIONS" />
+    <node id="COMPUTER GRAPHICS" />
+    <node id="NVIDIA DRIVE&#8482; STACK" />
+    <node id="NVIDIA CLARA&#8482;" />
+    <node id="NVIDIA OMNIVERSE&#8482;" />
+    <node id="NVIDIA AI ENTERPRISE SOFTWARE" />
+    <node id="NVIDIA GRACE&#8482;" />
+    <node id="NVIDIA DATA CENTER" />
+    <node id="DATA CENTER SCALE" />
+    <node id="DPU" />
+    <node id="COOLING" />
+    <node id="HEATING" />
+    <node id="STEAM" />
+    <edge source="FUEL" target="PURCHASED ELECTRICITY">
+      <data key="d0">601.0</data>
+    </edge>
+    <edge source="FUEL" target="PURCHASED HEAT">
+      <data key="d0">601.0</data>
+    </edge>
+    <edge source="FUEL" target="PURCHASED STEAM">
+      <data key="d0">601.0</data>
+    </edge>
+    <edge source="FUEL" target="PURCHASED COOLING">
+      <data key="d0">601.0</data>
+    </edge>
+    <edge source="FUEL" target="ON-SITE RENEWABLE ELECTRICITY">
+      <data key="d0">602.0</data>
+    </edge>
+    <edge source="FUEL" target="TOTAL ENERGY CONSUMPTION">
+      <data key="d0">253.0</data>
+    </edge>
+    <edge source="FUEL" target="ENERGY STORAGE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="GEOTHERMAL POWER">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="SOLAR ENERGY">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="WIND ENERGY">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="DATA CENTER">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="FUEL" target="REVERSE SUPPLY CHAIN PROGRAM">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="DATA CENTERS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="POWER PURCHASE AGREEMENTS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="ENERGY MIX">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="ON-SITE IRRIGATION WATER WITHDRAWAL">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="FUEL" target="ALPHABET">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="FUEL" target="NVIDIA DATA CENTER">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="NVIDIA">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="FUEL" target="ENERGY CONSUMPTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED ELECTRICITY" target="DATA CENTER">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="PURCHASED ELECTRICITY" target="REVERSE SUPPLY CHAIN PROGRAM">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED ELECTRICITY" target="DATA CENTERS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED ELECTRICITY" target="NVIDIA">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED ELECTRICITY" target="ENERGY CONSUMPTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED HEAT" target="DATA CENTER">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="PURCHASED HEAT" target="REVERSE SUPPLY CHAIN PROGRAM">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED HEAT" target="DATA CENTERS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED HEAT" target="NVIDIA">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED HEAT" target="ENERGY CONSUMPTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED STEAM" target="DATA CENTER">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="PURCHASED STEAM" target="REVERSE SUPPLY CHAIN PROGRAM">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED STEAM" target="DATA CENTERS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED STEAM" target="NVIDIA">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED COOLING" target="DATA CENTER">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="PURCHASED COOLING" target="REVERSE SUPPLY CHAIN PROGRAM">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED COOLING" target="DATA CENTERS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED COOLING" target="NVIDIA">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="PURCHASED COOLING" target="ENERGY CONSUMPTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ON-SITE RENEWABLE ELECTRICITY" target="DATA CENTER">
+      <data key="d0">4.0</data>
+    </edge>
+    <edge source="ON-SITE RENEWABLE ELECTRICITY" target="CORPORATE WATER STAKEHOLDER">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ON-SITE RENEWABLE ELECTRICITY" target="TOTAL ENERGY CONSUMPTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ON-SITE RENEWABLE ELECTRICITY" target="META EARTH PRO">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ON-SITE RENEWABLE ELECTRICITY" target="REVERSE SUPPLY CHAIN PROGRAM">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ON-SITE RENEWABLE ELECTRICITY" target="DATA CENTERS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ON-SITE RENEWABLE ELECTRICITY" target="NVIDIA">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ON-SITE RENEWABLE ELECTRICITY" target="ENERGY CONSUMPTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="DATA CENTER">
+      <data key="d0">4.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="CORPORATE WATER STAKEHOLDER">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="REVERSE SUPPLY CHAIN PROGRAM">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="RESOURCE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="RENEWABLE ENERGY">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="UNIT">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="DATA CENTERS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="NVIDIA">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL ENERGY CONSUMPTION" target="ENERGY CONSUMPTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="WATER">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="SOLAR POWER PLANTS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="WIND POWER PLANTS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="ENERGY CONSUMPTION">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="AI">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="CLEAN ENERGY">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="RENEWABLE ENERGY">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="ENERGY SYSTEMS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="CLEAN ENERGY PURCHASES">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="DATA CENTER" target="NVIDIA">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="SOLAR POWER PLANTS" target="CORPORATE WATER STAKEHOLDER">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="SOLAR POWER PLANTS" target="ENERGY CONSUMPTION">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="WIND POWER PLANTS" target="CORPORATE WATER STAKEHOLDER">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WIND POWER PLANTS" target="ENERGY CONSUMPTION">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="ENERGY CONSUMPTION" target="COOLING">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ENERGY CONSUMPTION" target="HEATING">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ENERGY CONSUMPTION" target="STEAM">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="AI" target="NVIDIA">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="PROFIT" target="SUSTAINABILITY REPORT">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="GREEN LIGHT" target="DISASTER RESPONSE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="RENEWABLE ENERGY" target="SOLAR POWER">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="RENEWABLE ENERGY" target="WIND POWER">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="RENEWABLE ENERGY" target="ON-SITE RENEWABLE ENERGY">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="RESOURCE" target="RESOURCE">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="RESOURCE" target="SOLAR API">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="RESOURCE" target="GLOBAL OPERATIONAL WATER USE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="RECYCLING">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="DISPOSAL">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="WASTE DIVERSION RATE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="RECYCLING RATE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="DISPOSAL RATE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="WASTE GENERATION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="WASTE REDUCTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="WASTE DIVERSION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WASTE" target="WASTE MANAGEMENT">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="TOTAL OPERATIONAL (SCOPE 1 + MARKET-BASED SCOPE 2) EMISSIONS" target="SCOPE 2 (MARKET-BASED)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="UNIT" target="PUE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="REFRIGERANT LEAKAGE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="DATA CENTERS">
+      <data key="d0">11.0</data>
+    </edge>
+    <edge source="ALPHABET" target="POWER PURCHASE AGREEMENTS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="ENERGY MIX">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="COPPER">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="ALTERNATIVE ENERGY SOURCES">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="IRRIGATION WATER WITHDRAWAL">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="ALPHABET" target="ISO 50001">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="ALPHABET" target="ISO 14001">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="ALPHABET" target="CLIMATE NEUTRAL DATA&lt;BR&gt;CENTRE PACT (CNDCP)">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="ALPHABET" target="EU CODE OF CONDUCT&lt;BR&gt;ON DATA CENTRE ENERGY&lt;BR&gt;EFFICIENCY">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="ALPHABET" target="LEED">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="REFRIGERANT LEAKAGE" target="GWP">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="DATA CENTERS" target="ISO 50001">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTERS" target="ISO 14001">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTERS" target="CLIMATE NEUTRAL DATA&lt;BR&gt;CENTRE PACT (CNDCP)">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTERS" target="EU CODE OF CONDUCT&lt;BR&gt;ON DATA CENTRE ENERGY&lt;BR&gt;EFFICIENCY">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTERS" target="LEED">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="POWER PURCHASE AGREEMENTS" target="SOLAR">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="POWER PURCHASE AGREEMENTS" target="WIND">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="GPU">
+      <data key="d0">4.0</data>
+    </edge>
+    <edge source="NVIDIA" target="CUDA">
+      <data key="d0">4.0</data>
+    </edge>
+    <edge source="NVIDIA" target="MELLANOX">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="NVIDIA" target="RESEARCH AND DEVELOPMENT">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="NVIDIA" target="GPU ACCELERATION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="PHYSICAL SIMULATIONS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="COMPUTER GRAPHICS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="NVIDIA DRIVE&#8482; STACK">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="NVIDIA CLARA&#8482;">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="NVIDIA OMNIVERSE&#8482;">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="NVIDIA AI ENTERPRISE SOFTWARE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="NVIDIA GRACE&#8482;">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="DATA CENTER SCALE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="DPU">
+      <data key="d0">1.0</data>
+    </edge>
+  </graph>
+</graphml>

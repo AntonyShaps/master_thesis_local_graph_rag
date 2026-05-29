@@ -55,6 +55,68 @@ For each company, outputs are written to `data/graph_extraction/<company>/`:
 - `records_raw.jsonl` (raw model output + parsed records per page/unit)
 - `run_summary.json`
 
+### 4b) Small ReLiK smoke test (entities + relations)
+
+Run a quick entity/relation extraction pass on a few sampled pages from
+`data/markdown/*.md` using [ReLiK](https://github.com/SapienzaNLP/relik).
+
+This uses a separate UV workspace so it does not affect the main project's
+dependencies.
+
+Create the isolated environment once:
+
+```bash
+uv sync --project relik_smoke_workspace
+```
+
+Run the smoke test (CPU):
+
+```bash
+uv run --project relik_smoke_workspace relik-smoke --reports google meta nvidia --pages-per-report 2 --device cpu
+```
+
+Useful options:
+
+- `--model relik-ie/relik-relation-extraction-large` (default)
+- `--min-page-number 4` to skip cover/table-of-contents pages
+- `--min-chars 800` to keep only content-heavy pages
+- `--max-chars-per-page 2800` to keep the run fast
+
+Outputs are written to timestamped folders in `data/eval/relik_smoke/`:
+
+- `sampled_pages.json` (the exact page texts sent to ReLiK)
+- `results.json` (spans + extracted relations per sampled page)
+- `run_summary.json` (totals and per-company counts)
+
+### 4c) Microsoft GraphRAG smoke test (local Mistral + local embeddings)
+
+This uses a separate UV workspace (`ms_graphrag_workspace`) and runs GraphRAG
+through a local OpenAI-compatible proxy:
+
+- chat/completions -> local `Mistral-7B-Instruct-v0.3`,
+- embeddings -> local `sentence-transformers/all-MiniLM-L6-v2`.
+
+Create the isolated environment once:
+
+```bash
+uv sync --project ms_graphrag_workspace
+```
+
+Run a smoke test:
+
+```bash
+uv run --project ms_graphrag_workspace ms-graphrag-smoke --reports google meta nvidia --pages-per-report 1 --method standard
+```
+
+If GPU execution is unstable on your machine, add `--proxy-device cpu`.
+
+Outputs are written to `data/eval/ms_graphrag_smoke/run_*/`:
+
+- `sampled_pages.json` (sampled page texts used as GraphRAG input files),
+- `index_stdout.txt` / `index_stderr.txt`,
+- `query_local_stdout.txt` / `query_global_stdout.txt`,
+- `run_summary.json` (status, commands, durations, output parquet files).
+
 ### 5) Aggregate + summarize graph and load to Neo4j
 
 Build summarized, company-scoped graph artifacts from existing extraction output:
@@ -92,6 +154,12 @@ Default model path:
 
 - `models/Mistral-7B-Instruct-v0.3`
 
+Available chat endpoints:
+
+- `POST /chat` for vector RAG answer.
+- `POST /chat/graphrag` for graph-augmented answer.
+- `POST /chat/compare` for side-by-side RAG and GraphRAG responses.
+
 ### 7) Run Streamlit frontend
 
 ```bash
@@ -99,6 +167,30 @@ uv run streamlit run streamlit_app.py
 ```
 
 Open the URL shown by Streamlit (usually `http://localhost:8501`).
+
+In the app, choose **Answer Mode**:
+
+- `RAG` for vector-only answer,
+- `GraphRAG` for graph-augmented answer,
+- `Compare` to show both side by side.
+
+### 8) Run side-by-side evaluation (25 factual + 25 multi-hop)
+
+Gold files:
+
+- `data/eval/factual_25_gold.jsonl`
+- `data/eval/multihop_25_gold.jsonl`
+
+Run evaluation:
+
+```bash
+uv run python scripts/evaluate_compare.py
+```
+
+Outputs are written to timestamped folders under `data/eval/results/` and include:
+
+- per-question JSONL results for factual/multihop/all,
+- summary metrics with Accuracy %, Hallucination rate %, and Win rate %.
 
 ## Environment Variables
 
