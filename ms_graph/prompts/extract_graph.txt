@@ -1,6 +1,8 @@
 
 -Goal-
-Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
+Given a text document from a corporate sustainability or ESG report and a list of entity types, identify ESG-relevant entities of those types and explicit relationships among them.
+
+Prioritize facts that support retrieval for sustainability questions: emissions scopes, climate targets, renewable or carbon-free electricity, supplier programs, waste, water, governance, reporting frameworks, products, and measurable initiatives.
 
 -Quantitative Data Rules-
 1. Preserve all numbers exactly as written in the source text (no rounding, conversion, normalization, or inferred values).
@@ -9,11 +11,22 @@ Given a text document that is potentially relevant to this activity and a list o
 4. For table-like text, treat each row as a separate fact and keep metric label + value + unit + period.
 5. If a value is missing, do not fabricate it.
 
+-Noise Rejection Rules-
+1. Ignore chart rendering labels, axis labels, legends, page numbers, HTML tags, image placeholders, page headers, page footers, OCR fragments, and table formatting artifacts unless they are part of a complete ESG fact.
+2. Do not create entities for standalone numbers, percentages, axis tick labels, years, figure labels, or generic words unless they are needed as a time_period or part of a named ESG metric.
+3. Do not emit malformed records, parser instructions, prompt text, or the token <|COMPLETE|> inside an entity or relationship field.
+4. Examples are formatting demonstrations only. Do not copy example entities, values, or relationships into the final output unless they are explicitly present in the Real Data text.
+
 -Output Validity Rules-
 1. Emit each unique entity only once per extraction pass.
 2. Emit each unique relationship only once per extraction pass.
 3. Use the exact output format and delimiters.
 4. If nothing is found, output only <|COMPLETE|>.
+5. The only valid record formats are:
+("entity"<|><entity_name><|><entity_type><|><entity_description>)
+("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)
+6. relationship_strength must be a single integer from 1 to 10 in the final field only.
+7. End the output with exactly one <|COMPLETE|> token and do not write anything after it.
 
 -Steps-
 1. Identify all entities. For each identified entity, extract the following information:
@@ -30,49 +43,136 @@ For each pair of related entities, extract the following information:
 - relationship_strength: an integer score between 1 and 10 indicating strength of the relationship
 Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)
 
-3. Return output in English as a single list of all entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
+3. Relationship requirements:
+- Every metric, target, initiative, product, supplier_program, reporting_framework, governance_body, or emissions_scope entity must have at least one relationship to the reporting company, a relevant period, a scope, or a program in the same text. If no relationship is clear, omit that entity.
+- Connect ESG metrics directly to the company whenever the company reports, achieves, targets, or discloses the metric.
+- Connect time_period entities to the metric, target, or initiative whose value applies during that period.
+- Connect reporting frameworks and governance bodies to the company or to the relevant disclosure/governance process.
+- Connect products and initiatives to the ESG outcome they enable.
 
-4. If you must translate into English, translate descriptions only.
+4. Return output in English as a single list of all entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
 
-5. When finished, output <|COMPLETE|>.
+5. If you must translate into English, translate descriptions only.
+
+6. When finished, output <|COMPLETE|>.
 
 -Examples-
 ######################
 Example 1:
 
-entity_types: [company, target, metric, time_period, framework]
+entity_types: [company, governance_body, initiative, reporting_framework]
 text:
-NVIDIA committed from a FY23 base year to reduce absolute scope 1 and 2 emissions 50% by FY30. NVIDIA also targets a 75% reduction in scope 3 emissions intensity per PFLOP by FY30. The targets were validated by SBTi for 1.5C alignment.
+NVIDIA's Nominating and Corporate Governance Committee reviews and discusses sustainability policies, issues, reporting, strategy, risks, opportunities, and related programs. NVIDIA determines sustainability topics for reporting using GRI, SASB, TCFD, and the U.N. Sustainable Development Goals.
 ------------------------
 output:
-("entity"<|>NVIDIA<|>COMPANY<|>NVIDIA has climate targets; metric=scope 1 and 2 emissions reduction; value=50%; unit=%; period=FY30; scope=scope 1 and 2; metric=scope 3 emissions intensity reduction; value=75%; unit=% per PFLOP; period=FY30; scope=scope 3)
+("entity"<|>NVIDIA<|>COMPANY<|>NVIDIA reports sustainability governance and reporting practices; metric=sustainability reporting topic framework; value=GRI, SASB, TCFD, U.N. Sustainable Development Goals; unit=NONE; period=NONE; scope=sustainability reporting)
 ##
-("entity"<|>FY23 BASE YEAR<|>TIME_PERIOD<|>Baseline year used for target tracking; metric=baseline year; value=FY23; unit=NONE; period=FY23; scope=NONE)
+("entity"<|>NOMINATING AND CORPORATE GOVERNANCE COMMITTEE<|>GOVERNANCE_BODY<|>Board-level committee reviewing sustainability policies, issues, reporting, strategy, risks, opportunities, and related programs; metric=governance oversight; value=Nominating and Corporate Governance Committee; unit=NONE; period=NONE; scope=sustainability governance)
 ##
-("entity"<|>SBTI<|>FRAMEWORK<|>Science Based Targets initiative validating climate targets; metric=temperature alignment; value=1.5; unit=C; period=NONE; scope=NONE)
+("entity"<|>SUSTAINABILITY REPORTING TOPICS<|>INITIATIVE<|>Process for determining sustainability topics for reporting; metric=reporting topic framework; value=GRI, SASB, TCFD, U.N. Sustainable Development Goals; unit=NONE; period=NONE; scope=sustainability reporting)
 ##
-("relationship"<|>NVIDIA<|>FY23 BASE YEAR<|>NVIDIA defines FY23 as the baseline year for emissions targets; value=FY23; unit=NONE; period=FY23<|>8)
+("entity"<|>GRI<|>REPORTING_FRAMEWORK<|>Global Reporting Initiative framework used for sustainability reporting topics; metric=reporting framework; value=GRI; unit=NONE; period=NONE; scope=sustainability reporting)
 ##
-("relationship"<|>NVIDIA<|>SBTI<|>NVIDIA states that SBTi validated its targets with 1.5C alignment; value=1.5; unit=C; period=NONE<|>7)
+("entity"<|>SASB<|>REPORTING_FRAMEWORK<|>Sustainability Accounting Standards Board framework used for sustainability reporting topics; metric=reporting framework; value=SASB; unit=NONE; period=NONE; scope=sustainability reporting)
+##
+("entity"<|>TCFD<|>REPORTING_FRAMEWORK<|>Task Force on Climate-related Financial Disclosures framework used for sustainability reporting topics; metric=reporting framework; value=TCFD; unit=NONE; period=NONE; scope=sustainability reporting)
+##
+("entity"<|>U.N. SUSTAINABLE DEVELOPMENT GOALS<|>REPORTING_FRAMEWORK<|>U.N. Sustainable Development Goals used for sustainability reporting topics; metric=reporting framework; value=U.N. Sustainable Development Goals; unit=NONE; period=NONE; scope=sustainability reporting)
+##
+("relationship"<|>NVIDIA<|>NOMINATING AND CORPORATE GOVERNANCE COMMITTEE<|>NVIDIA's Nominating and Corporate Governance Committee reviews and discusses sustainability policies, reporting, strategy, risks, opportunities, and programs; value=Nominating and Corporate Governance Committee; unit=NONE; period=NONE; scope=sustainability governance<|>10)
+##
+("relationship"<|>NVIDIA<|>SUSTAINABILITY REPORTING TOPICS<|>NVIDIA determines sustainability topics for reporting using GRI, SASB, TCFD, and the U.N. Sustainable Development Goals; value=GRI, SASB, TCFD, U.N. Sustainable Development Goals; unit=NONE; period=NONE; scope=sustainability reporting<|>9)
+##
+("relationship"<|>SUSTAINABILITY REPORTING TOPICS<|>GRI<|>GRI is one of the frameworks NVIDIA uses to determine sustainability topics for reporting; value=GRI; unit=NONE; period=NONE; scope=sustainability reporting<|>8)
+##
+("relationship"<|>SUSTAINABILITY REPORTING TOPICS<|>SASB<|>SASB is one of the frameworks NVIDIA uses to determine sustainability topics for reporting; value=SASB; unit=NONE; period=NONE; scope=sustainability reporting<|>8)
+##
+("relationship"<|>SUSTAINABILITY REPORTING TOPICS<|>TCFD<|>TCFD is one of the frameworks NVIDIA uses to determine sustainability topics for reporting; value=TCFD; unit=NONE; period=NONE; scope=sustainability reporting<|>8)
+##
+("relationship"<|>SUSTAINABILITY REPORTING TOPICS<|>U.N. SUSTAINABLE DEVELOPMENT GOALS<|>The U.N. Sustainable Development Goals are one framework NVIDIA uses to determine sustainability topics for reporting; value=U.N. Sustainable Development Goals; unit=NONE; period=NONE; scope=sustainability reporting<|>8)
 <|COMPLETE|>
 #############################
 
 Example 2:
 
-entity_types: [company, metric, standard, time_period]
+entity_types: [company, metric, emissions_scope, time_period]
 text:
-Water withdrawal was 409,814 m3 in FY25, 382,636 m3 in FY24, and 376,656 m3 in FY23. Reference indicators include GRI 303-3 and SASB TC-SC-140a.1.
+In FY25, NVIDIA achieved 100% renewable electricity for offices and data centers under operational control. NVIDIA reported FY25 Scope 1 emissions of 12,952 MT CO2e and FY25 Scope 3 emissions of 6,912,577 MT CO2e.
 ------------------------
 output:
-("entity"<|>WATER WITHDRAWAL<|>METRIC<|>Water withdrawal values are reported by fiscal year; metric=water withdrawal; value=409,814; unit=m3; period=FY25; scope=NONE; metric=water withdrawal; value=382,636; unit=m3; period=FY24; scope=NONE; metric=water withdrawal; value=376,656; unit=m3; period=FY23; scope=NONE)
+("entity"<|>NVIDIA<|>COMPANY<|>NVIDIA reports renewable electricity and greenhouse gas emissions metrics for FY25; metric=renewable electricity; value=100%; unit=%; period=FY25; scope=offices and data centers under operational control; metric=Scope 1 emissions; value=12,952; unit=MT CO2e; period=FY25; scope=Scope 1; metric=Scope 3 emissions; value=6,912,577; unit=MT CO2e; period=FY25; scope=Scope 3)
 ##
-("entity"<|>GRI 303-3<|>STANDARD<|>Reporting indicator used for water disclosure; metric=reference indicator; value=GRI 303-3; unit=NONE; period=NONE; scope=NONE)
+("entity"<|>RENEWABLE ELECTRICITY<|>METRIC<|>Renewable electricity achieved for offices and data centers under operational control; metric=renewable electricity; value=100%; unit=%; period=FY25; scope=offices and data centers under operational control)
 ##
-("entity"<|>SASB TC-SC-140A.1<|>STANDARD<|>Reporting indicator used for water disclosure; metric=reference indicator; value=SASB TC-SC-140a.1; unit=NONE; period=NONE; scope=NONE)
+("entity"<|>SCOPE 1 EMISSIONS<|>EMISSIONS_SCOPE<|>Direct greenhouse gas emissions reported by NVIDIA; metric=Scope 1 emissions; value=12,952; unit=MT CO2e; period=FY25; scope=Scope 1)
 ##
-("relationship"<|>WATER WITHDRAWAL<|>GRI 303-3<|>Water withdrawal is reported under GRI 303-3 with FY25/FY24/FY23 values preserved<|>6)
+("entity"<|>SCOPE 3 EMISSIONS<|>EMISSIONS_SCOPE<|>Value chain greenhouse gas emissions reported by NVIDIA; metric=Scope 3 emissions; value=6,912,577; unit=MT CO2e; period=FY25; scope=Scope 3)
 ##
-("relationship"<|>WATER WITHDRAWAL<|>SASB TC-SC-140A.1<|>Water withdrawal is reported with SASB TC-SC-140a.1 as a reference indicator<|>6)
+("entity"<|>FY25<|>TIME_PERIOD<|>Fiscal year for renewable electricity and emissions metrics; metric=reporting year; value=FY25; unit=NONE; period=FY25; scope=NONE)
+##
+("relationship"<|>NVIDIA<|>RENEWABLE ELECTRICITY<|>NVIDIA achieved 100% renewable electricity in FY25 for offices and data centers under operational control; value=100%; unit=%; period=FY25; scope=offices and data centers under operational control<|>10)
+##
+("relationship"<|>NVIDIA<|>SCOPE 1 EMISSIONS<|>NVIDIA reported FY25 Scope 1 emissions of 12,952 MT CO2e; value=12,952; unit=MT CO2e; period=FY25; scope=Scope 1<|>10)
+##
+("relationship"<|>NVIDIA<|>SCOPE 3 EMISSIONS<|>NVIDIA reported FY25 Scope 3 emissions of 6,912,577 MT CO2e; value=6,912,577; unit=MT CO2e; period=FY25; scope=Scope 3<|>10)
+##
+("relationship"<|>RENEWABLE ELECTRICITY<|>FY25<|>The renewable electricity achievement applies to FY25; value=100%; unit=%; period=FY25; scope=offices and data centers under operational control<|>8)
+##
+("relationship"<|>SCOPE 1 EMISSIONS<|>FY25<|>The Scope 1 emissions value applies to FY25; value=12,952; unit=MT CO2e; period=FY25; scope=Scope 1<|>8)
+##
+("relationship"<|>SCOPE 3 EMISSIONS<|>FY25<|>The Scope 3 emissions value applies to FY25; value=6,912,577; unit=MT CO2e; period=FY25; scope=Scope 3<|>8)
+<|COMPLETE|>
+#############################
+
+Example 3:
+
+entity_types: [company, product, initiative]
+text:
+NVIDIA Earth-2 is used for AI-driven global weather and climate simulations, including improved extreme weather prediction and climate resilience. NVIDIA's Trustworthy AI principles are intended to ensure models comply with privacy and data protection laws, perform safely and as intended, communicate transparently about design and limitations, and minimize unwanted bias.
+------------------------
+output:
+("entity"<|>NVIDIA<|>COMPANY<|>NVIDIA reports AI-enabled climate simulation products and Trustworthy AI principles; metric=AI climate simulation use; value=NVIDIA Earth-2; unit=NONE; period=NONE; scope=global weather and climate simulations)
+##
+("entity"<|>NVIDIA EARTH-2<|>PRODUCT<|>AI-driven platform used for global weather and climate simulations, improved extreme weather prediction, and climate resilience; metric=simulation use case; value=global weather and climate simulations; unit=NONE; period=NONE; scope=weather and climate)
+##
+("entity"<|>TRUSTWORTHY AI PRINCIPLES<|>INITIATIVE<|>Principles intended to ensure privacy and data protection compliance, safe and intended model performance, transparent communication about design and limitations, and minimized unwanted bias; metric=AI governance principle; value=privacy, safety, transparency, minimized unwanted bias; unit=NONE; period=NONE; scope=AI models)
+##
+("relationship"<|>NVIDIA<|>NVIDIA EARTH-2<|>NVIDIA Earth-2 is used for AI-driven global weather and climate simulations, including improved extreme weather prediction and climate resilience; value=global weather and climate simulations; unit=NONE; period=NONE; scope=weather and climate<|>10)
+##
+("relationship"<|>NVIDIA<|>TRUSTWORTHY AI PRINCIPLES<|>NVIDIA's Trustworthy AI principles are intended to support privacy compliance, safe performance, transparent communication, and minimized unwanted bias; value=privacy, safety, transparency, minimized unwanted bias; unit=NONE; period=NONE; scope=AI models<|>10)
+<|COMPLETE|>
+#############################
+
+Example 4:
+
+entity_types: [company, metric, target, supplier_program, time_period]
+text:
+NVIDIA aims to use only conflict-free gold, tantalum, tungsten, and tin and to achieve 100% RMAP-compliant 3TG processing facilities. NVIDIA's FY25 landfill diversion rate was 84%, and Scope 3 category 1 supplier engagement covered over 80% of category 1 emissions.
+------------------------
+output:
+("entity"<|>NVIDIA<|>COMPANY<|>NVIDIA reports responsible minerals, landfill diversion, and supplier engagement metrics; metric=RMAP-compliant 3TG processing facilities; value=100%; unit=%; period=NONE; scope=3TG processing facilities; metric=landfill diversion rate; value=84%; unit=%; period=FY25; scope=landfill diversion; metric=Scope 3 category 1 supplier engagement coverage; value=over 80%; unit=%; period=FY25; scope=Scope 3 category 1 emissions)
+##
+("entity"<|>CONFLICT-FREE 3TG MINERALS<|>TARGET<|>Responsible minerals goal to use only conflict-free gold, tantalum, tungsten, and tin; metric=conflict-free 3TG minerals; value=gold, tantalum, tungsten, tin; unit=NONE; period=NONE; scope=3TG minerals)
+##
+("entity"<|>RMAP-COMPLIANT 3TG PROCESSING FACILITIES<|>SUPPLIER_PROGRAM<|>Responsible Minerals Assurance Process compliance goal for 3TG processing facilities; metric=RMAP-compliant 3TG processing facilities; value=100%; unit=%; period=NONE; scope=3TG processing facilities)
+##
+("entity"<|>LANDFILL DIVERSION RATE<|>METRIC<|>Percentage of waste diverted from landfill; metric=landfill diversion rate; value=84%; unit=%; period=FY25; scope=landfill diversion)
+##
+("entity"<|>SCOPE 3 CATEGORY 1 SUPPLIER ENGAGEMENT<|>METRIC<|>Supplier engagement coverage for Scope 3 category 1 emissions; metric=Scope 3 category 1 supplier engagement coverage; value=over 80%; unit=%; period=FY25; scope=Scope 3 category 1 emissions)
+##
+("entity"<|>FY25<|>TIME_PERIOD<|>Fiscal year for landfill diversion and supplier engagement metrics; metric=reporting year; value=FY25; unit=NONE; period=FY25; scope=NONE)
+##
+("relationship"<|>NVIDIA<|>CONFLICT-FREE 3TG MINERALS<|>NVIDIA aims to use only conflict-free gold, tantalum, tungsten, and tin; value=gold, tantalum, tungsten, tin; unit=NONE; period=NONE; scope=3TG minerals<|>10)
+##
+("relationship"<|>NVIDIA<|>RMAP-COMPLIANT 3TG PROCESSING FACILITIES<|>NVIDIA aims to achieve 100% RMAP-compliant 3TG processing facilities; value=100%; unit=%; period=NONE; scope=3TG processing facilities<|>10)
+##
+("relationship"<|>NVIDIA<|>LANDFILL DIVERSION RATE<|>NVIDIA's FY25 landfill diversion rate was 84%; value=84%; unit=%; period=FY25; scope=landfill diversion<|>10)
+##
+("relationship"<|>NVIDIA<|>SCOPE 3 CATEGORY 1 SUPPLIER ENGAGEMENT<|>NVIDIA's supplier engagement covered over 80% of Scope 3 category 1 emissions in FY25; value=over 80%; unit=%; period=FY25; scope=Scope 3 category 1 emissions<|>10)
+##
+("relationship"<|>LANDFILL DIVERSION RATE<|>FY25<|>The landfill diversion rate applies to FY25; value=84%; unit=%; period=FY25; scope=landfill diversion<|>8)
+##
+("relationship"<|>SCOPE 3 CATEGORY 1 SUPPLIER ENGAGEMENT<|>FY25<|>The Scope 3 category 1 supplier engagement coverage applies to FY25; value=over 80%; unit=%; period=FY25; scope=Scope 3 category 1 emissions<|>8)
 <|COMPLETE|>
 #############################
 

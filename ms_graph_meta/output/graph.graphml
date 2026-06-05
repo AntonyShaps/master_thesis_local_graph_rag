@@ -1,78 +1,132 @@
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key id="d0" for="edge" attr.name="weight" attr.type="double" />
   <graph edgedefault="undirected">
-    <node id="NVIDIA" />
-    <node id="5 MILLION U.S. HOMES" />
-    <node id="SBTI" />
-    <node id="SUSTAINABILITY INDICATORS" />
-    <node id="FY23 BASE YEAR" />
-    <node id="WATER WITHDRAWAL" />
-    <node id="GRI 303-3" />
-    <node id="SASB TC-SC-140A.1" />
-    <node id="PRODUCT ENVIRONMENTAL IMPACT" />
-    <node id="PRODUCT ENERGY EFFICIENCY" />
-    <node id="ENERGY-EFFICIENT OPERATIONS" />
-    <node id="PRODUCT VALUE CHAIN" />
-    <node id="SASB TC-SC-130A.1" />
-    <node id="SASB TC-SC-410A.2" />
-    <node id="GRI 306-3" />
-    <node id="UNGC E17" />
-    <node id="UNGC E18" />
-    <node id="SASB TC-SC-320A.1" />
-    <node id="SASB TC-SC-320A.2" />
-    <edge source="NVIDIA" target="5 MILLION U.S. HOMES">
+    <node id="META" />
+    <node id="WASTE GENERATED IN OPERATIONS" />
+    <node id="CAPITAL GOODS" />
+    <node id="FUEL AND ENERGY-RELATED ACTIVITIES (MARKET-BASED)" />
+    <node id="UPSTREAM TRANSPORTATION AND DISTRIBUTION" />
+    <node id="UPSTREAM LEASED ASSETS" />
+    <node id="DOWNSTREAM TRANSPORTATION AND DISTRIBUTION" />
+    <node id="USE OF SOLD PRODUCTS" />
+    <node id="CARBON REMOVAL PROJECTS" />
+    <node id="OPEN CATALYST" />
+    <node id="POWER PURCHASE AGREEMENTS" />
+    <node id="OWNED DATA CENTER CONSTRUCTION WASTE DIVERSION" />
+    <node id="GRI" />
+    <node id="SASB" />
+    <node id="U.N. GLOBAL COMPACT" />
+    <node id="SUSTAINABILITY REPORTING" />
+    <node id="2024" />
+    <node id="LOW CARBON CONCRETE" />
+    <node id="MASS TIMBER" />
+    <node id="LOW CARBON METALS" />
+    <node id="LOW EMISSIONS CONSTRUCTION EQUIPMENT" />
+    <node id="2025" />
+    <node id="RENEWABLE HYDROTREATED VEGETABLE OIL (HVO)" />
+    <node id="2038" />
+    <node id="2030" />
+    <node id="WORKER SURVEYS" />
+    <node id="MANAGEMENT SYSTEMS" />
+    <node id="ETHICS" />
+    <node id="ELECTRONICS REUSE AND RECYCLING STANDARD" />
+    <node id="STRATEGIC SUPPLIER SITES" />
+    <node id="RESPONSIBLE FACTORY INITIATIVE" />
+    <node id="RESPONSIBLE LABOR INITIATIVE" />
+    <node id="RESPONSIBLE MINERALS INITIATIVE" />
+    <node id="UN GLOBAL COMPACT" />
+    <edge source="META" target="WASTE GENERATED IN OPERATIONS">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="META" target="CAPITAL GOODS">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="META" target="FUEL AND ENERGY-RELATED ACTIVITIES (MARKET-BASED)">
+      <data key="d0">11.0</data>
+    </edge>
+    <edge source="META" target="UPSTREAM TRANSPORTATION AND DISTRIBUTION">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="META" target="UPSTREAM LEASED ASSETS">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="META" target="DOWNSTREAM TRANSPORTATION AND DISTRIBUTION">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="META" target="USE OF SOLD PRODUCTS">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="META" target="CARBON REMOVAL PROJECTS">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="META" target="OPEN CATALYST">
       <data key="d0">1.0</data>
     </edge>
-    <edge source="NVIDIA" target="SBTI">
-      <data key="d0">3.0</data>
-    </edge>
-    <edge source="NVIDIA" target="SUSTAINABILITY INDICATORS">
+    <edge source="META" target="POWER PURCHASE AGREEMENTS">
       <data key="d0">1.0</data>
     </edge>
-    <edge source="NVIDIA" target="FY23 BASE YEAR">
-      <data key="d0">9.0</data>
+    <edge source="META" target="OWNED DATA CENTER CONSTRUCTION WASTE DIVERSION">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="PRODUCT ENVIRONMENTAL IMPACT">
-      <data key="d0">17.0</data>
+    <edge source="META" target="GRI">
+      <data key="d0">1.0</data>
     </edge>
-    <edge source="NVIDIA" target="PRODUCT ENERGY EFFICIENCY">
-      <data key="d0">17.0</data>
+    <edge source="META" target="SASB">
+      <data key="d0">1.0</data>
     </edge>
-    <edge source="NVIDIA" target="ENERGY-EFFICIENT OPERATIONS">
-      <data key="d0">17.0</data>
+    <edge source="META" target="U.N. GLOBAL COMPACT">
+      <data key="d0">1.0</data>
     </edge>
-    <edge source="NVIDIA" target="PRODUCT VALUE CHAIN">
-      <data key="d0">17.0</data>
+    <edge source="META" target="LOW CARBON CONCRETE">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-130A.1">
-      <data key="d0">18.0</data>
+    <edge source="META" target="MASS TIMBER">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-410A.2">
-      <data key="d0">18.0</data>
+    <edge source="META" target="LOW CARBON METALS">
+      <data key="d0">1.0</data>
     </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-140A.1">
-      <data key="d0">18.0</data>
+    <edge source="META" target="WORKER SURVEYS">
+      <data key="d0">1.0</data>
     </edge>
-    <edge source="NVIDIA" target="GRI 306-3">
-      <data key="d0">6.0</data>
+    <edge source="META" target="STRATEGIC SUPPLIER SITES">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="UNGC E17">
-      <data key="d0">16.0</data>
-    </edge>
-    <edge source="NVIDIA" target="UNGC E18">
-      <data key="d0">21.0</data>
-    </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-320A.1">
-      <data key="d0">16.0</data>
-    </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-320A.2">
+    <edge source="OPEN CATALYST" target="WORKER SURVEYS">
       <data key="d0">8.0</data>
     </edge>
-    <edge source="WATER WITHDRAWAL" target="GRI 303-3">
-      <data key="d0">6.0</data>
-    </edge>
-    <edge source="WATER WITHDRAWAL" target="SASB TC-SC-140A.1">
+    <edge source="SUSTAINABILITY REPORTING" target="2024">
       <data key="d0">1.0</data>
+    </edge>
+    <edge source="LOW EMISSIONS CONSTRUCTION EQUIPMENT" target="2025">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="2025" target="RENEWABLE HYDROTREATED VEGETABLE OIL (HVO)">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="2038" target="2030">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="WORKER SURVEYS" target="MANAGEMENT SYSTEMS">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="WORKER SURVEYS" target="RESPONSIBLE FACTORY INITIATIVE">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="WORKER SURVEYS" target="RESPONSIBLE LABOR INITIATIVE">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="WORKER SURVEYS" target="RESPONSIBLE MINERALS INITIATIVE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="MANAGEMENT SYSTEMS" target="ETHICS">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="MANAGEMENT SYSTEMS" target="ELECTRONICS REUSE AND RECYCLING STANDARD">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="MANAGEMENT SYSTEMS" target="UN GLOBAL COMPACT">
+      <data key="d0">8.0</data>
     </edge>
   </graph>
 </graphml>

@@ -1,0 +1,14 @@
+1. nvidia, nvidia, google  
+    factual - 10 questions * 3 = 30 * 3 = 90
+    numeric - 10 questions * 3 = 30 * 3 = 90 
+    multi-hop 10 questions * 3 = 30 * 3 = 90 
+    cross company                         30
+2. Anser accuracy, answer time, hallucination rate, precision, recal f1?? 
+        basic               local                 global                    aggregate
+        nvidia meta, google nviida, meta google nvidia meta google aggreage
+factual
+numeric
+multihop
+cross company
+3. Description of grpahr rag with examples (visually)
+4. try different prompts and reindex

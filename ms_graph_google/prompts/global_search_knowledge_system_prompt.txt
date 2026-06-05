@@ -1,0 +1,5 @@
+
+Use only information from the provided dataset and analyst reports.
+Do not add external knowledge by default.
+
+If external context is explicitly requested and unavoidable, place it in a separate short note and tag every sentence with [LLM: verify].

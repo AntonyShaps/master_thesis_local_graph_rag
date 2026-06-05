@@ -2,77 +2,354 @@
   <key id="d0" for="edge" attr.name="weight" attr.type="double" />
   <graph edgedefault="undirected">
     <node id="NVIDIA" />
-    <node id="5 MILLION U.S. HOMES" />
-    <node id="SBTI" />
+    <node id="NOMINATING AND CORPORATE GOVERNANCE COMMITTEE" />
+    <node id="SUSTAINABILITY REPORTING TOPICS" />
+    <node id="GRI" />
+    <node id="SASB" />
+    <node id="TCFD" />
+    <node id="U.N. SUSTAINABLE DEVELOPMENT GOALS" />
+    <node id="NVIDIA DRIVE&#8482; STACK" />
+    <node id="NVIDIA CLARA&#8482;" />
+    <node id="NVIDIA OMNIVERSE&#8482;" />
+    <node id="NVIDIA AI ENTERPRISE" />
+    <node id="NVIDIA GRACE&#8482;" />
+    <node id="FYE25" />
+    <node id="RENEWABLE ELECTRICITY" />
+    <node id="SCOPE 1 EMISSIONS" />
+    <node id="SCOPE 3 EMISSIONS" />
+    <node id="LEED GOLD CERTIFIED BUILDINGS" />
+    <node id="ISO 14001 CERTIFIED EMS" />
+    <node id="ISO 50001 CERTIFIED ENERGY MANAGEMENT SYSTEM" />
+    <node id="HYDRAULIC DIVERSION RATE" />
+    <node id="SOLAR PANELS" />
+    <node id="LEED GOLD CERTIFICATION" />
+    <node id="EMPLOYEE REFERRAL PROGRAM" />
+    <node id="NVIDIA IGNITE PROGRAM" />
+    <node id="401(K) PROGRAMS" />
     <node id="SUSTAINABILITY INDICATORS" />
-    <node id="FY23 BASE YEAR" />
-    <node id="WATER WITHDRAWAL" />
-    <node id="GRI 303-3" />
-    <node id="SASB TC-SC-140A.1" />
-    <node id="PRODUCT ENVIRONMENTAL IMPACT" />
-    <node id="PRODUCT ENERGY EFFICIENCY" />
-    <node id="ENERGY-EFFICIENT OPERATIONS" />
-    <node id="PRODUCT VALUE CHAIN" />
-    <node id="SASB TC-SC-130A.1" />
-    <node id="SASB TC-SC-410A.2" />
-    <node id="GRI 306-3" />
-    <node id="UNGC E17" />
-    <node id="UNGC E18" />
-    <node id="SASB TC-SC-320A.1" />
-    <node id="SASB TC-SC-320A.2" />
-    <edge source="NVIDIA" target="5 MILLION U.S. HOMES">
-      <data key="d0">1.0</data>
+    <node id="PROWANNA" />
+    <node id="UPREACH" />
+    <node id="HUMAN RIGHTS SECTION" />
+    <node id="RESPONSIBLE MINERALS" />
+    <node id="RBA CODE ALIGNMENT" />
+    <node id="PRODUCT COMPLIANCE" />
+    <node id="ENVIRONMENTAL INITIATIVES" />
+    <node id="NVIDIA GPU SYSTEMS PACKAGING" />
+    <node id="CODE OF CONDUCT TRAINING" />
+    <node id="CYBERSECURITY TRAINING" />
+    <node id="SPEAK UP CORPORATE HOTLINE" />
+    <node id="RECOGNIZABLE MATERIALS" />
+    <node id="SPEAK UP" />
+    <node id="ISO 27001 CERTIFICATE" />
+    <node id="2025 FORM 10-K" />
+    <node id="UNGC" />
+    <node id="2021 GRI STANDARDS" />
+    <node id="SCOPE 2, MARKET-BASED EMISSIONS" />
+    <node id="SCOPE 2, LOCATION-BASED EMISSIONS" />
+    <node id="CATEGORY 1: PURCHASED GOODS AND SERVICES EMISSIONS" />
+    <node id="GRI 305-1" />
+    <node id="UNGC E6" />
+    <node id="SASB TC-SC-110A.1" />
+    <node id="GRI 305-3&lt;BR&gt;UNGC E6,E6.1" />
+    <node id="FY25" />
+    <node id="WASTE&#178; (METRIC TONS)" />
+    <node id="WASTE RECYCLED/COMPOSTED (METRIC TONS)" />
+    <node id="WASTE RECYCLED (METRIC TONS)" />
+    <node id="WASTE COMPOSTED (METRIC TONS)" />
+    <node id="WASTE LANDFILLED (METRIC TONS)" />
+    <node id="WATER STRESS AREAS" />
+    <node id="COLLECTIVE BARGAINING AGREEMENTS" />
+    <node id="NO DATA OR NOT DISCLOSED" />
+    <node id="POSITIONS HELD BY WOMEN" />
+    <node id="F Y25" />
+    <node id="F Y24" />
+    <node id="F Y23" />
+    <node id="HUMAN RIGHTS POLICY" />
+    <node id="UNGC L1, L2, L3, L4, L5, L11, L12" />
+    <node id="GRI 2-15" />
+    <node id="INVESTIGATIONS PROCESS" />
+    <node id="CODE OF CONDUCT" />
+    <node id="GRI 2-23" />
+    <node id="UNGC G2, G3, G7, G7.1" />
+    <node id="HR2, HR2.1, L1.1, E1.1" />
+    <edge source="NVIDIA" target="NOMINATING AND CORPORATE GOVERNANCE COMMITTEE">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="SBTI">
-      <data key="d0">3.0</data>
-    </edge>
-    <edge source="NVIDIA" target="SUSTAINABILITY INDICATORS">
-      <data key="d0">1.0</data>
-    </edge>
-    <edge source="NVIDIA" target="FY23 BASE YEAR">
+    <edge source="NVIDIA" target="SUSTAINABILITY REPORTING TOPICS">
       <data key="d0">9.0</data>
     </edge>
-    <edge source="NVIDIA" target="PRODUCT ENVIRONMENTAL IMPACT">
-      <data key="d0">17.0</data>
+    <edge source="NVIDIA" target="NVIDIA DRIVE&#8482; STACK">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="PRODUCT ENERGY EFFICIENCY">
-      <data key="d0">17.0</data>
+    <edge source="NVIDIA" target="NVIDIA CLARA&#8482;">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="ENERGY-EFFICIENT OPERATIONS">
-      <data key="d0">17.0</data>
+    <edge source="NVIDIA" target="NVIDIA OMNIVERSE&#8482;">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="PRODUCT VALUE CHAIN">
-      <data key="d0">17.0</data>
+    <edge source="NVIDIA" target="NVIDIA AI ENTERPRISE">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-130A.1">
-      <data key="d0">18.0</data>
+    <edge source="NVIDIA" target="NVIDIA GRACE&#8482;">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-410A.2">
-      <data key="d0">18.0</data>
+    <edge source="NVIDIA" target="FYE25">
+      <data key="d0">1.0</data>
     </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-140A.1">
-      <data key="d0">18.0</data>
+    <edge source="NVIDIA" target="RENEWABLE ELECTRICITY">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="GRI 306-3">
-      <data key="d0">6.0</data>
+    <edge source="NVIDIA" target="SCOPE 1 EMISSIONS">
+      <data key="d0">20.0</data>
     </edge>
-    <edge source="NVIDIA" target="UNGC E17">
-      <data key="d0">16.0</data>
+    <edge source="NVIDIA" target="SCOPE 3 EMISSIONS">
+      <data key="d0">20.0</data>
     </edge>
-    <edge source="NVIDIA" target="UNGC E18">
-      <data key="d0">21.0</data>
+    <edge source="NVIDIA" target="LEED GOLD CERTIFIED BUILDINGS">
+      <data key="d0">10.0</data>
     </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-320A.1">
-      <data key="d0">16.0</data>
+    <edge source="NVIDIA" target="ISO 14001 CERTIFIED EMS">
+      <data key="d0">84.0</data>
     </edge>
-    <edge source="NVIDIA" target="SASB TC-SC-320A.2">
+    <edge source="NVIDIA" target="ISO 50001 CERTIFIED ENERGY MANAGEMENT SYSTEM">
+      <data key="d0">92.0</data>
+    </edge>
+    <edge source="NVIDIA" target="LEED GOLD CERTIFICATION">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="NVIDIA" target="EMPLOYEE REFERRAL PROGRAM">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="NVIDIA" target="NVIDIA IGNITE PROGRAM">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="NVIDIA" target="401(K) PROGRAMS">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SUSTAINABILITY INDICATORS">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="NVIDIA" target="PROWANNA">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="UPREACH">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="HUMAN RIGHTS SECTION">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="RESPONSIBLE MINERALS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="RBA CODE ALIGNMENT">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="PRODUCT COMPLIANCE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="ENVIRONMENTAL INITIATIVES">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="NVIDIA GPU SYSTEMS PACKAGING">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="CODE OF CONDUCT TRAINING">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="CYBERSECURITY TRAINING">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SPEAK UP CORPORATE HOTLINE">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SPEAK UP">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="ISO 27001 CERTIFICATE">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="2025 FORM 10-K">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SASB">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="GRI">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="UNGC">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="2021 GRI STANDARDS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SCOPE 2, MARKET-BASED EMISSIONS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SCOPE 2, LOCATION-BASED EMISSIONS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="CATEGORY 1: PURCHASED GOODS AND SERVICES EMISSIONS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="GRI 305-1">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="UNGC E6">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="SASB TC-SC-110A.1">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="GRI 305-3&lt;BR&gt;UNGC E6,E6.1">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="WASTE&#178; (METRIC TONS)">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="NVIDIA" target="WASTE RECYCLED/COMPOSTED (METRIC TONS)">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="NVIDIA" target="WASTE RECYCLED (METRIC TONS)">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="NVIDIA" target="WASTE COMPOSTED (METRIC TONS)">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="NVIDIA" target="WASTE LANDFILLED (METRIC TONS)">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="WATER STRESS AREAS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="COLLECTIVE BARGAINING AGREEMENTS">
       <data key="d0">8.0</data>
     </edge>
-    <edge source="WATER WITHDRAWAL" target="GRI 303-3">
-      <data key="d0">6.0</data>
+    <edge source="NVIDIA" target="NO DATA OR NOT DISCLOSED">
+      <data key="d0">8.0</data>
     </edge>
-    <edge source="WATER WITHDRAWAL" target="SASB TC-SC-140A.1">
+    <edge source="NVIDIA" target="POSITIONS HELD BY WOMEN">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="NVIDIA" target="HUMAN RIGHTS POLICY">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="NVIDIA" target="UNGC L1, L2, L3, L4, L5, L11, L12">
       <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="GRI 2-15">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="INVESTIGATIONS PROCESS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="CODE OF CONDUCT">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="GRI 2-23">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="UNGC G2, G3, G7, G7.1">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA" target="HR2, HR2.1, L1.1, E1.1">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="SUSTAINABILITY REPORTING TOPICS" target="GRI">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="SUSTAINABILITY REPORTING TOPICS" target="SASB">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="SUSTAINABILITY REPORTING TOPICS" target="TCFD">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="SUSTAINABILITY REPORTING TOPICS" target="U.N. SUSTAINABLE DEVELOPMENT GOALS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="RENEWABLE ELECTRICITY" target="LEED GOLD CERTIFIED BUILDINGS">
+      <data key="d0">18.0</data>
+    </edge>
+    <edge source="RENEWABLE ELECTRICITY" target="LEED GOLD CERTIFICATION">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="SCOPE 1 EMISSIONS" target="GRI 305-1">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="SCOPE 3 EMISSIONS" target="GRI 305-3&lt;BR&gt;UNGC E6,E6.1">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="LEED GOLD CERTIFIED BUILDINGS" target="HYDRAULIC DIVERSION RATE">
+      <data key="d0">24.0</data>
+    </edge>
+    <edge source="LEED GOLD CERTIFIED BUILDINGS" target="SOLAR PANELS">
+      <data key="d0">17.0</data>
+    </edge>
+    <edge source="HYDRAULIC DIVERSION RATE" target="LEED GOLD CERTIFICATION">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="HUMAN RIGHTS SECTION" target="RESPONSIBLE MINERALS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="HUMAN RIGHTS SECTION" target="PRODUCT COMPLIANCE">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="HUMAN RIGHTS SECTION" target="ENVIRONMENTAL INITIATIVES">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NVIDIA GPU SYSTEMS PACKAGING" target="RECOGNIZABLE MATERIALS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="SCOPE 2, MARKET-BASED EMISSIONS" target="UNGC E6">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="SCOPE 2, LOCATION-BASED EMISSIONS" target="SASB TC-SC-110A.1">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="CATEGORY 1: PURCHASED GOODS AND SERVICES EMISSIONS" target="FY25">
+      <data key="d0">36.0</data>
+    </edge>
+    <edge source="GRI 305-1" target="FY25">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="UNGC E6" target="FY25">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="SASB TC-SC-110A.1" target="FY25">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="GRI 305-3&lt;BR&gt;UNGC E6,E6.1" target="FY25">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="FY25" target="WASTE RECYCLED/COMPOSTED (METRIC TONS)">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="FY25" target="WASTE RECYCLED (METRIC TONS)">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="FY25" target="WASTE COMPOSTED (METRIC TONS)">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="FY25" target="WASTE LANDFILLED (METRIC TONS)">
+      <data key="d0">11.0</data>
+    </edge>
+    <edge source="NO DATA OR NOT DISCLOSED" target="F Y25">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="NO DATA OR NOT DISCLOSED" target="F Y24">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="NO DATA OR NOT DISCLOSED" target="F Y23">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="POSITIONS HELD BY WOMEN" target="F Y25">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="POSITIONS HELD BY WOMEN" target="F Y24">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="POSITIONS HELD BY WOMEN" target="F Y23">
+      <data key="d0">8.0</data>
     </edge>
   </graph>
 </graphml>

@@ -75,8 +75,19 @@ embed_text:
 extract_graph:
   completion_model_id: default_completion_model
   prompt: "prompts/extract_graph.txt"
-  entity_types: [organization,person,geo,event]
-  max_gleanings: 1
+  entity_types:
+    - company
+    - metric
+    - emissions_scope
+    - target
+    - time_period
+    - product
+    - initiative
+    - supplier_program
+    - reporting_framework
+    - governance_body
+    - location
+  max_gleanings: 2
 
 summarize_descriptions:
   completion_model_id: default_completion_model

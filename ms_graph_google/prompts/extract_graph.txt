@@ -1,0 +1,179 @@
+
+-Goal-
+Given a text document from a corporate sustainability or ESG report and a list of entity types, identify ESG-relevant entities of those types and explicit relationships among them.
+
+Prioritize facts that support retrieval for sustainability questions: emissions scopes, climate targets, renewable or carbon-free electricity, supplier programs, waste, water, governance, reporting frameworks, products, and measurable initiatives.
+
+-Quantitative Data Rules-
+1. Preserve all numbers exactly as written in the source text (no rounding, conversion, normalization, or inferred values).
+2. Preserve units and symbols exactly (for example: %, tCO2e, MWh, kWh, USD, million, billion, x, m3, PFLOP).
+3. Preserve period and scope for each value (for example: FY25, baseline year, scope 1/2/3, region, per-unit basis).
+4. For table-like text, treat each row as a separate fact and keep metric label + value + unit + period.
+5. If a value is missing, do not fabricate it.
+
+-Noise Rejection Rules-
+1. Ignore chart rendering labels, axis labels, legends, page numbers, HTML tags, image placeholders, page headers, page footers, OCR fragments, and table formatting artifacts unless they are part of a complete ESG fact.
+2. Do not create entities for standalone numbers, percentages, axis tick labels, years, figure labels, or generic words unless they are needed as a time_period or part of a named ESG metric.
+3. Do not emit malformed records, parser instructions, prompt text, or the token <|COMPLETE|> inside an entity or relationship field.
+
+-Output Validity Rules-
+1. Emit each unique entity only once per extraction pass.
+2. Emit each unique relationship only once per extraction pass.
+3. Use the exact output format and delimiters.
+4. If nothing is found, output only <|COMPLETE|>.
+5. The only valid record formats are:
+("entity"<|><entity_name><|><entity_type><|><entity_description>)
+("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)
+6. relationship_strength must be a single integer from 1 to 10 in the final field only.
+7. End the output with exactly one <|COMPLETE|> token and do not write anything after it.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, capitalized
+- entity_type: One of the following types: [{entity_types}]
+- entity_description: Comprehensive description of the entity's attributes and activities. Keep quantitative facts explicit in this compact form when available: metric=<metric>; value=<value>; unit=<unit_or_NONE>; period=<period_or_NONE>; scope=<scope_or_NONE>
+Format each entity as ("entity"<|><entity_name><|><entity_type><|><entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are clearly related.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation of why the source and target are related. Include quantitative evidence when present, preserving exact value, unit, and period.
+- relationship_strength: an integer score between 1 and 10 indicating strength of the relationship
+Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)
+
+3. Relationship requirements:
+- Every metric, target, initiative, product, supplier_program, reporting_framework, governance_body, or emissions_scope entity must have at least one relationship to the reporting company, a relevant period, a scope, or a program in the same text. If no relationship is clear, omit that entity.
+- Connect ESG metrics directly to the company whenever the company reports, achieves, targets, or discloses the metric.
+- Connect time_period entities to the metric, target, or initiative whose value applies during that period.
+- Connect reporting frameworks and governance bodies to the company or to the relevant disclosure/governance process.
+- Connect products and initiatives to the ESG outcome they enable.
+
+4. Return output in English as a single list of all entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
+
+5. If you must translate into English, translate descriptions only.
+
+6. When finished, output <|COMPLETE|>.
+
+-Examples-
+######################
+Example 1:
+
+entity_types: [company, metric, emissions_scope, target, time_period, reporting_framework]
+text:
+NVIDIA committed from a FY23 base year to reduce absolute scope 1 and 2 emissions 50% by FY30. NVIDIA also targets a 75% reduction in scope 3 emissions intensity per PFLOP by FY30. The targets were validated by SBTi for 1.5C alignment.
+------------------------
+output:
+("entity"<|>NVIDIA<|>COMPANY<|>NVIDIA has climate targets; metric=scope 1 and 2 emissions reduction; value=50%; unit=%; period=FY30; scope=scope 1 and 2; metric=scope 3 emissions intensity reduction; value=75%; unit=% per PFLOP; period=FY30; scope=scope 3)
+##
+("entity"<|>SCOPE 1 AND 2 EMISSIONS REDUCTION<|>TARGET<|>Target to reduce absolute scope 1 and 2 emissions; metric=absolute scope 1 and 2 emissions reduction; value=50%; unit=%; period=FY30; scope=scope 1 and 2)
+##
+("entity"<|>SCOPE 3 EMISSIONS INTENSITY REDUCTION<|>TARGET<|>Target to reduce scope 3 emissions intensity per PFLOP; metric=scope 3 emissions intensity reduction; value=75%; unit=% per PFLOP; period=FY30; scope=scope 3)
+##
+("entity"<|>FY23 BASE YEAR<|>TIME_PERIOD<|>Baseline year used for target tracking; metric=baseline year; value=FY23; unit=NONE; period=FY23; scope=NONE)
+##
+("entity"<|>FY30<|>TIME_PERIOD<|>Target year for emissions reduction commitments; metric=target year; value=FY30; unit=NONE; period=FY30; scope=NONE)
+##
+("entity"<|>SBTI<|>REPORTING_FRAMEWORK<|>Science Based Targets initiative validating climate targets; metric=temperature alignment; value=1.5; unit=C; period=NONE; scope=NONE)
+##
+("relationship"<|>NVIDIA<|>SCOPE 1 AND 2 EMISSIONS REDUCTION<|>NVIDIA committed to reduce absolute scope 1 and 2 emissions by 50% by FY30 from a FY23 base year; value=50%; unit=%; period=FY30; scope=scope 1 and 2<|>9)
+##
+("relationship"<|>NVIDIA<|>SCOPE 3 EMISSIONS INTENSITY REDUCTION<|>NVIDIA targets a 75% reduction in scope 3 emissions intensity per PFLOP by FY30; value=75%; unit=% per PFLOP; period=FY30; scope=scope 3<|>9)
+##
+("relationship"<|>SCOPE 1 AND 2 EMISSIONS REDUCTION<|>FY23 BASE YEAR<|>The scope 1 and 2 emissions reduction target uses FY23 as the base year; value=FY23; unit=NONE; period=FY23<|>8)
+##
+("relationship"<|>SCOPE 1 AND 2 EMISSIONS REDUCTION<|>FY30<|>The scope 1 and 2 emissions reduction target is set for FY30; value=FY30; unit=NONE; period=FY30<|>8)
+##
+("relationship"<|>NVIDIA<|>SBTI<|>NVIDIA states that SBTi validated its climate targets with 1.5C alignment; value=1.5; unit=C; period=NONE<|>7)
+<|COMPLETE|>
+#############################
+
+Example 2:
+
+entity_types: [company, metric, time_period, reporting_framework]
+text:
+Water withdrawal was 409,814 m3 in FY25, 382,636 m3 in FY24, and 376,656 m3 in FY23. Reference indicators include GRI 303-3 and SASB TC-SC-140a.1.
+------------------------
+output:
+("entity"<|>WATER WITHDRAWAL<|>METRIC<|>Water withdrawal values are reported by fiscal year; metric=water withdrawal; value=409,814; unit=m3; period=FY25; scope=NONE; metric=water withdrawal; value=382,636; unit=m3; period=FY24; scope=NONE; metric=water withdrawal; value=376,656; unit=m3; period=FY23; scope=NONE)
+##
+("entity"<|>FY25<|>TIME_PERIOD<|>Fiscal year used for water withdrawal reporting; metric=reporting year; value=FY25; unit=NONE; period=FY25; scope=NONE)
+##
+("entity"<|>FY24<|>TIME_PERIOD<|>Fiscal year used for water withdrawal reporting; metric=reporting year; value=FY24; unit=NONE; period=FY24; scope=NONE)
+##
+("entity"<|>FY23<|>TIME_PERIOD<|>Fiscal year used for water withdrawal reporting; metric=reporting year; value=FY23; unit=NONE; period=FY23; scope=NONE)
+##
+("entity"<|>GRI 303-3<|>REPORTING_FRAMEWORK<|>Reporting indicator used for water disclosure; metric=reference indicator; value=GRI 303-3; unit=NONE; period=NONE; scope=NONE)
+##
+("entity"<|>SASB TC-SC-140A.1<|>REPORTING_FRAMEWORK<|>Reporting indicator used for water disclosure; metric=reference indicator; value=SASB TC-SC-140a.1; unit=NONE; period=NONE; scope=NONE)
+##
+("relationship"<|>WATER WITHDRAWAL<|>FY25<|>Water withdrawal is reported as 409,814 m3 in FY25; value=409,814; unit=m3; period=FY25; scope=NONE<|>8)
+##
+("relationship"<|>WATER WITHDRAWAL<|>FY24<|>Water withdrawal is reported as 382,636 m3 in FY24; value=382,636; unit=m3; period=FY24; scope=NONE<|>8)
+##
+("relationship"<|>WATER WITHDRAWAL<|>FY23<|>Water withdrawal is reported as 376,656 m3 in FY23; value=376,656; unit=m3; period=FY23; scope=NONE<|>8)
+##
+("relationship"<|>WATER WITHDRAWAL<|>GRI 303-3<|>Water withdrawal is reported under GRI 303-3 with FY25/FY24/FY23 values preserved<|>6)
+##
+("relationship"<|>WATER WITHDRAWAL<|>SASB TC-SC-140A.1<|>Water withdrawal is reported with SASB TC-SC-140a.1 as a reference indicator<|>6)
+<|COMPLETE|>
+#############################
+
+Example 3:
+
+entity_types: [company, metric, emissions_scope, time_period]
+text:
+In 2024, our scope 1 emissions were approximately 73,100 tCO2e, representing less than 1% of our total 2024 ambition-based carbon footprint. In 2024, our total scope 3 (ambition-based) emissions were approximately 8.4 million tCO2e, representing 73% of our total 2024 ambition-based carbon footprint.
+------------------------
+output:
+("entity"<|>GOOGLE<|>COMPANY<|>Google reports greenhouse gas emissions and ambition-based carbon footprint metrics; metric=total 2024 ambition-based carbon footprint; value=NONE; unit=tCO2e; period=2024; scope=scope 1 and scope 3)
+##
+("entity"<|>SCOPE 1 EMISSIONS<|>EMISSIONS_SCOPE<|>Direct emissions from company operations; metric=scope 1 emissions; value=73,100; unit=tCO2e; period=2024; scope=scope 1)
+##
+("entity"<|>SCOPE 3 AMBITION-BASED EMISSIONS<|>EMISSIONS_SCOPE<|>Indirect supply chain emissions reported on an ambition-based basis; metric=scope 3 ambition-based emissions; value=8.4 million; unit=tCO2e; period=2024; scope=scope 3)
+##
+("entity"<|>2024<|>TIME_PERIOD<|>Reporting year for emissions metrics; metric=reporting year; value=2024; unit=NONE; period=2024; scope=NONE)
+##
+("relationship"<|>GOOGLE<|>SCOPE 1 EMISSIONS<|>Google reports scope 1 emissions of approximately 73,100 tCO2e in 2024, representing less than 1% of its total 2024 ambition-based carbon footprint; value=73,100; unit=tCO2e; period=2024; scope=scope 1<|>10)
+##
+("relationship"<|>GOOGLE<|>SCOPE 3 AMBITION-BASED EMISSIONS<|>Google reports total scope 3 ambition-based emissions of approximately 8.4 million tCO2e in 2024, representing 73% of its total 2024 ambition-based carbon footprint; value=8.4 million; unit=tCO2e; period=2024; scope=scope 3<|>10)
+##
+("relationship"<|>SCOPE 1 EMISSIONS<|>2024<|>The scope 1 emissions value applies to reporting year 2024; value=73,100; unit=tCO2e; period=2024; scope=scope 1<|>8)
+##
+("relationship"<|>SCOPE 3 AMBITION-BASED EMISSIONS<|>2024<|>The scope 3 ambition-based emissions value applies to reporting year 2024; value=8.4 million; unit=tCO2e; period=2024; scope=scope 3<|>8)
+<|COMPLETE|>
+#############################
+
+Example 4:
+
+entity_types: [company, initiative, supplier_program, target, time_period, product, metric]
+text:
+The Google Clean Energy Addendum asks suppliers to commit to achieving a 100% clean electricity match by the end of 2029 for the electricity they use to manufacture Google products. In 2024 alone, five products--Nest thermostats, Google Earth Pro, Solar API, fuel-efficient routing in Google Maps, and Green Light--enabled individuals, cities, and other partners to collectively reduce an estimated 26 million metric tons of GHG emissions.
+------------------------
+output:
+("entity"<|>GOOGLE<|>COMPANY<|>Google reports supplier clean electricity commitments and product-enabled emissions reductions; metric=clean electricity match; value=100%; unit=%; period=end of 2029; scope=supplier manufacturing electricity; metric=enabled GHG emissions reductions; value=26 million; unit=metric tons of GHG emissions; period=2024; scope=five Google products)
+##
+("entity"<|>GOOGLE CLEAN ENERGY ADDENDUM<|>SUPPLIER_PROGRAM<|>Supplier agreement asking suppliers to commit to clean electricity for manufacturing Google products; metric=clean electricity match; value=100%; unit=%; period=end of 2029; scope=electricity used to manufacture Google products)
+##
+("entity"<|>100% CLEAN ELECTRICITY MATCH BY END OF 2029<|>TARGET<|>Supplier commitment target for electricity used to manufacture Google products; metric=clean electricity match; value=100%; unit=%; period=end of 2029; scope=supplier manufacturing electricity)
+##
+("entity"<|>FIVE GOOGLE PRODUCTS<|>PRODUCT<|>Nest thermostats, Google Earth Pro, Solar API, fuel-efficient routing in Google Maps, and Green Light enabled emissions reductions; metric=enabled GHG emissions reductions; value=26 million; unit=metric tons of GHG emissions; period=2024; scope=five Google products)
+##
+("entity"<|>2024<|>TIME_PERIOD<|>Reporting year for product-enabled emissions reductions; metric=reporting year; value=2024; unit=NONE; period=2024; scope=NONE)
+##
+("relationship"<|>GOOGLE<|>GOOGLE CLEAN ENERGY ADDENDUM<|>Google uses the Clean Energy Addendum as a supplier agreement for clean electricity commitments; value=100%; unit=%; period=end of 2029; scope=electricity used to manufacture Google products<|>10)
+##
+("relationship"<|>GOOGLE CLEAN ENERGY ADDENDUM<|>100% CLEAN ELECTRICITY MATCH BY END OF 2029<|>The Clean Energy Addendum asks suppliers to commit to achieving a 100% clean electricity match by the end of 2029 for electricity used to manufacture Google products; value=100%; unit=%; period=end of 2029; scope=supplier manufacturing electricity<|>10)
+##
+("relationship"<|>GOOGLE<|>FIVE GOOGLE PRODUCTS<|>Five Google products enabled an estimated 26 million metric tons of GHG emissions reductions in 2024; value=26 million; unit=metric tons of GHG emissions; period=2024; scope=five Google products<|>9)
+##
+("relationship"<|>FIVE GOOGLE PRODUCTS<|>2024<|>The product-enabled emissions reductions are reported for 2024; value=26 million; unit=metric tons of GHG emissions; period=2024; scope=five Google products<|>8)
+<|COMPLETE|>
+#############################
+
+-Real Data-
+######################
+entity_types: [{entity_types}]
+text: {input_text}
+######################
+output:

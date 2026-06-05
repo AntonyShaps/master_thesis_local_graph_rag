@@ -1,0 +1,321 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="weight" attr.type="double" />
+  <graph edgedefault="undirected">
+    <node id="GOOGLE" />
+    <node id="GOOGLE CLEAN ENERGY ADDENDUM" />
+    <node id="100% CLEAN ELECTRICITY MATCH BY END OF 2029" />
+    <node id="FIVE GOOGLE PRODUCTS" />
+    <node id="2024" />
+    <node id="DATA CENTER ENERGY EFFICIENCY INITIATIVE" />
+    <node id="CLEAN ENERGY PURCHASES" />
+    <node id="24/7 CARBON-FREE ENERGY" />
+    <node id="GLOBAL RENEWABLE ENERGY MATCHING" />
+    <node id="1 GW CLEAN ENERGY PIPELINE IN TAIWAN" />
+    <node id="SEMICONDUCTOR SUPPLIERS AND MANUFACTURERS IN TAIWAN" />
+    <node id="EUROCONTROL" />
+    <node id="CONTRAIL REDUCTION OPPORTUNITY" />
+    <node id="FUEL CONSUMPTION IN AVIATION" />
+    <node id="24/7 CARBON-FREE ENERGY MOONSHOT" />
+    <node id="GLOBAL AVERAGE CARBON-FREE ENERGY" />
+    <node id="NORTH AMERICA" />
+    <node id="UNITED STATES" />
+    <node id="CANADA &amp; MEXICO" />
+    <node id="EUROPE, MIDDLE EAST, &amp; AFRICA" />
+    <node id="EUROPE" />
+    <node id="MIDDLE EAST &amp; AFRICA" />
+    <node id="LATIN AMERICA" />
+    <node id="ASIA PACIFIC" />
+    <node id="GLOBAL" />
+    <node id="SCOPE 1 EMISSIONS" />
+    <node id="SCOPE 2 EMISSIONS" />
+    <node id="SCOPE 3 AMBITION-BASED EMISSIONS" />
+    <node id="CLEAN ELECTRICITY FOR OUR SUPPLY CHAIN" />
+    <node id="ALPHABET" />
+    <node id="SUSTAINABILITY FOCUS AREA" />
+    <node id="NET-ZERO WORKING GROUP" />
+    <node id="CATEGORY 1: PURCHASED GOODS AND SERVICES" />
+    <node id="CATEGORY 2: CAPITAL GOODS" />
+    <node id="CATEGORY 11: USE OF SOLD PRODUCTS" />
+    <node id="CATEGORY 12: END-OF-LIFE TREATMENT OF SOLD PRODUCTS" />
+    <node id="VARAHA" />
+    <node id="CO280" />
+    <node id="CHARM INDUSTRIAL" />
+    <node id="STOCKHOLM EXERGI" />
+    <node id="DATA CENTERS" />
+    <node id="OFFICE AND OTHER FACILITIES" />
+    <node id="RENEWABLE ENERGY CONSUMPTION" />
+    <node id="RENEWABLE ELECTRICITY PROCURED (PPAS AND OTHER RENEWABLE ENERGY AGREEMENTS)" />
+    <node id="RENEWABLE ELECTRICITY PROCURED (ON-SITE)" />
+    <node id="RENEWABLE ELECTRICITY (GRID)" />
+    <node id="TOTAL ELECTRICITY CONSUMPTION" />
+    <node id="TOTAL ELECTRICITY PROCURED FROM RENEWABLE SOURCES" />
+    <node id="GLOBAL RENEWABLE ENERGY MATCH" />
+    <node id="GOOGLE DATA CENTER GRID REGIONS" />
+    <node id="GLOBAL TOTAL" />
+    <node id="DATA CENTER ENERGY EFFICIENCY (PUE)" />
+    <node id="BELGIUM" />
+    <node id="CHILE" />
+    <node id="DENMARK" />
+    <node id="FINLAND" />
+    <node id="IRELAND" />
+    <node id="NETHERLANDS" />
+    <node id="SINGAPORE" />
+    <node id="TAIWAN" />
+    <node id="ALPHABET INC." />
+    <node id="ESTERN &amp; YOUNG LLP" />
+    <node id="BIOSGENIC EMISSIONS" />
+    <node id="2025 EPA EMISSION FACTORS" />
+    <node id="2024 CLIMATE REGISTRY DEFAULT EMISSION FACTORS" />
+    <node id="2024 DEPARTMENT FOR ENVIRONMENT FOOD AND RURAL AFFAIRS (DEFRA) UK GOVERNMENT GHG CONVERSION FACTORS" />
+    <node id="IRIGATION WATER WITHDRAWAL" />
+    <edge source="GOOGLE" target="GOOGLE CLEAN ENERGY ADDENDUM">
+      <data key="d0">70.0</data>
+    </edge>
+    <edge source="GOOGLE" target="FIVE GOOGLE PRODUCTS">
+      <data key="d0">68.0</data>
+    </edge>
+    <edge source="GOOGLE" target="DATA CENTER ENERGY EFFICIENCY INITIATIVE">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="GOOGLE" target="CLEAN ENERGY PURCHASES">
+      <data key="d0">11.0</data>
+    </edge>
+    <edge source="GOOGLE" target="SEMICONDUCTOR SUPPLIERS AND MANUFACTURERS IN TAIWAN">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="EUROCONTROL">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GOOGLE" target="FUEL CONSUMPTION IN AVIATION">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="GOOGLE" target="24/7 CARBON-FREE ENERGY MOONSHOT">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="GLOBAL AVERAGE CARBON-FREE ENERGY">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="GOOGLE" target="SCOPE 1 EMISSIONS">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="GOOGLE" target="SCOPE 2 EMISSIONS">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="GOOGLE" target="SCOPE 3 AMBITION-BASED EMISSIONS">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="GOOGLE" target="100% CLEAN ELECTRICITY MATCH BY END OF 2029">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="DATA CENTERS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="OFFICE AND OTHER FACILITIES">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="RENEWABLE ENERGY CONSUMPTION">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="RENEWABLE ELECTRICITY PROCURED (PPAS AND OTHER RENEWABLE ENERGY AGREEMENTS)">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="RENEWABLE ELECTRICITY PROCURED (ON-SITE)">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="RENEWABLE ELECTRICITY (GRID)">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="TOTAL ELECTRICITY CONSUMPTION">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="TOTAL ELECTRICITY PROCURED FROM RENEWABLE SOURCES">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="GLOBAL RENEWABLE ENERGY MATCH">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE" target="GOOGLE DATA CENTER GRID REGIONS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE CLEAN ENERGY ADDENDUM" target="100% CLEAN ELECTRICITY MATCH BY END OF 2029">
+      <data key="d0">52.0</data>
+    </edge>
+    <edge source="GOOGLE CLEAN ENERGY ADDENDUM" target="1 GW CLEAN ENERGY PIPELINE IN TAIWAN">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE CLEAN ENERGY ADDENDUM" target="CLEAN ELECTRICITY FOR OUR SUPPLY CHAIN">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="GOOGLE CLEAN ENERGY ADDENDUM" target="ALPHABET">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="FIVE GOOGLE PRODUCTS" target="2024">
+      <data key="d0">49.0</data>
+    </edge>
+    <edge source="FIVE GOOGLE PRODUCTS" target="CONTRAIL REDUCTION OPPORTUNITY">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="FIVE GOOGLE PRODUCTS" target="FIVE GOOGLE PRODUCTS">
+      <data key="d0">27.0</data>
+    </edge>
+    <edge source="FIVE GOOGLE PRODUCTS" target="ALPHABET">
+      <data key="d0">18.0</data>
+    </edge>
+    <edge source="2024" target="SCOPE 1 EMISSIONS">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="2024" target="SCOPE 2 EMISSIONS">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="2024" target="SCOPE 3 AMBITION-BASED EMISSIONS">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="2024" target="CATEGORY 1: PURCHASED GOODS AND SERVICES">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="2024" target="CATEGORY 2: CAPITAL GOODS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="2024" target="CATEGORY 11: USE OF SOLD PRODUCTS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="2024" target="CATEGORY 12: END-OF-LIFE TREATMENT OF SOLD PRODUCTS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="CLEAN ENERGY PURCHASES" target="24/7 CARBON-FREE ENERGY">
+      <data key="d0">18.0</data>
+    </edge>
+    <edge source="CLEAN ENERGY PURCHASES" target="GLOBAL RENEWABLE ENERGY MATCHING">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="1 GW CLEAN ENERGY PIPELINE IN TAIWAN" target="SEMICONDUCTOR SUPPLIERS AND MANUFACTURERS IN TAIWAN">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="NORTH AMERICA">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="UNITED STATES">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="CANADA &amp; MEXICO">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="EUROPE, MIDDLE EAST, &amp; AFRICA">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="EUROPE">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="MIDDLE EAST &amp; AFRICA">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="LATIN AMERICA">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="ASIA PACIFIC">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="GLOBAL AVERAGE CARBON-FREE ENERGY" target="GLOBAL">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="NORTH AMERICA" target="GLOBAL RENEWABLE ENERGY MATCH">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="UNITED STATES" target="DATA CENTER ENERGY EFFICIENCY (PUE)">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="EUROPE, MIDDLE EAST, &amp; AFRICA" target="GLOBAL RENEWABLE ENERGY MATCH">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="LATIN AMERICA" target="GLOBAL RENEWABLE ENERGY MATCH">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="ASIA PACIFIC" target="GLOBAL RENEWABLE ENERGY MATCH">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="ALPHABET" target="SUSTAINABILITY FOCUS AREA">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="ALPHABET" target="NET-ZERO WORKING GROUP">
+      <data key="d0">20.0</data>
+    </edge>
+    <edge source="ALPHABET" target="CATEGORY 1: PURCHASED GOODS AND SERVICES">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="ALPHABET" target="CATEGORY 2: CAPITAL GOODS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="ALPHABET" target="CATEGORY 11: USE OF SOLD PRODUCTS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="CATEGORY 12: END-OF-LIFE TREATMENT OF SOLD PRODUCTS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="BIOSGENIC EMISSIONS">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="ALPHABET" target="2025 EPA EMISSION FACTORS">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="ALPHABET" target="2024 CLIMATE REGISTRY DEFAULT EMISSION FACTORS">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="ALPHABET" target="2024 DEPARTMENT FOR ENVIRONMENT FOOD AND RURAL AFFAIRS (DEFRA) UK GOVERNMENT GHG CONVERSION FACTORS">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ALPHABET" target="IRIGATION WATER WITHDRAWAL">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="SUSTAINABILITY FOCUS AREA" target="NET-ZERO WORKING GROUP">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="VARAHA" target="CO280">
+      <data key="d0">16.0</data>
+    </edge>
+    <edge source="VARAHA" target="STOCKHOLM EXERGI">
+      <data key="d0">21.0</data>
+    </edge>
+    <edge source="VARAHA" target="CHARM INDUSTRIAL">
+      <data key="d0">24.0</data>
+    </edge>
+    <edge source="CO280" target="CHARM INDUSTRIAL">
+      <data key="d0">28.0</data>
+    </edge>
+    <edge source="CO280" target="STOCKHOLM EXERGI">
+      <data key="d0">14.0</data>
+    </edge>
+    <edge source="CHARM INDUSTRIAL" target="STOCKHOLM EXERGI">
+      <data key="d0">35.0</data>
+    </edge>
+    <edge source="GLOBAL RENEWABLE ENERGY MATCH" target="GLOBAL TOTAL">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="DATA CENTER ENERGY EFFICIENCY (PUE)" target="BELGIUM">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTER ENERGY EFFICIENCY (PUE)" target="CHILE">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTER ENERGY EFFICIENCY (PUE)" target="DENMARK">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTER ENERGY EFFICIENCY (PUE)" target="FINLAND">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTER ENERGY EFFICIENCY (PUE)" target="IRELAND">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTER ENERGY EFFICIENCY (PUE)" target="NETHERLANDS">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTER ENERGY EFFICIENCY (PUE)" target="SINGAPORE">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="DATA CENTER ENERGY EFFICIENCY (PUE)" target="TAIWAN">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="ALPHABET INC." target="ESTERN &amp; YOUNG LLP">
+      <data key="d0">1.0</data>
+    </edge>
+  </graph>
+</graphml>

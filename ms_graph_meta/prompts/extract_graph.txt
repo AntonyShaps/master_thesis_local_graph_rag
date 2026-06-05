@@ -1,6 +1,8 @@
 
 -Goal-
-Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
+Given a text document from a corporate sustainability or ESG report and a list of entity types, identify ESG-relevant entities of those types and explicit relationships among them.
+
+Prioritize facts that support retrieval for sustainability questions: emissions scopes, climate targets, renewable or carbon-free electricity, supplier programs, waste, water, governance, reporting frameworks, products, and measurable initiatives.
 
 -Quantitative Data Rules-
 1. Preserve all numbers exactly as written in the source text (no rounding, conversion, normalization, or inferred values).
@@ -9,11 +11,22 @@ Given a text document that is potentially relevant to this activity and a list o
 4. For table-like text, treat each row as a separate fact and keep metric label + value + unit + period.
 5. If a value is missing, do not fabricate it.
 
+-Noise Rejection Rules-
+1. Ignore chart rendering labels, axis labels, legends, page numbers, HTML tags, image placeholders, page headers, page footers, OCR fragments, and table formatting artifacts unless they are part of a complete ESG fact.
+2. Do not create entities for standalone numbers, percentages, axis tick labels, years, figure labels, or generic words unless they are needed as a time_period or part of a named ESG metric.
+3. Do not emit malformed records, parser instructions, prompt text, or the token <|COMPLETE|> inside an entity or relationship field.
+4. Examples are formatting demonstrations only. Do not copy example entities, values, or relationships into the final output unless they are explicitly present in the Real Data text.
+
 -Output Validity Rules-
 1. Emit each unique entity only once per extraction pass.
 2. Emit each unique relationship only once per extraction pass.
 3. Use the exact output format and delimiters.
 4. If nothing is found, output only <|COMPLETE|>.
+5. The only valid record formats are:
+("entity"<|><entity_name><|><entity_type><|><entity_description>)
+("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)
+6. relationship_strength must be a single integer from 1 to 10 in the final field only.
+7. End the output with exactly one <|COMPLETE|> token and do not write anything after it.
 
 -Steps-
 1. Identify all entities. For each identified entity, extract the following information:
@@ -30,49 +43,134 @@ For each pair of related entities, extract the following information:
 - relationship_strength: an integer score between 1 and 10 indicating strength of the relationship
 Format each relationship as ("relationship"<|><source_entity><|><target_entity><|><relationship_description><|><relationship_strength>)
 
-3. Return output in English as a single list of all entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
+3. Relationship requirements:
+- Every metric, target, initiative, product, supplier_program, reporting_framework, governance_body, or emissions_scope entity must have at least one relationship to the reporting company, a relevant period, a scope, or a program in the same text. If no relationship is clear, omit that entity.
+- Connect ESG metrics directly to the company whenever the company reports, achieves, targets, or discloses the metric.
+- Connect time_period entities to the metric, target, or initiative whose value applies during that period.
+- Connect reporting frameworks and governance bodies to the company or to the relevant disclosure/governance process.
+- Connect products and initiatives to the ESG outcome they enable.
 
-4. If you must translate into English, translate descriptions only.
+4. Return output in English as a single list of all entities and relationships identified in steps 1 and 2. Use **##** as the list delimiter.
 
-5. When finished, output <|COMPLETE|>.
+5. If you must translate into English, translate descriptions only.
+
+6. When finished, output <|COMPLETE|>.
 
 -Examples-
 ######################
 Example 1:
 
-entity_types: [company, target, metric, time_period, framework]
+entity_types: [company, governance_body, initiative, reporting_framework]
 text:
-NVIDIA committed from a FY23 base year to reduce absolute scope 1 and 2 emissions 50% by FY30. NVIDIA also targets a 75% reduction in scope 3 emissions intensity per PFLOP by FY30. The targets were validated by SBTi for 1.5C alignment.
+Meta's Board Audit & Risk Oversight Committee (AROC) oversees sustainability and climate-related issues, risks, and opportunities. Meta's sustainability reporting references GRI, SASB, and the U.N. Global Compact.
 ------------------------
 output:
-("entity"<|>NVIDIA<|>COMPANY<|>NVIDIA has climate targets; metric=scope 1 and 2 emissions reduction; value=50%; unit=%; period=FY30; scope=scope 1 and 2; metric=scope 3 emissions intensity reduction; value=75%; unit=% per PFLOP; period=FY30; scope=scope 3)
+("entity"<|>META<|>COMPANY<|>Meta reports sustainability governance and reporting practices; metric=reporting framework; value=GRI, SASB, U.N. Global Compact; unit=NONE; period=NONE; scope=sustainability reporting)
 ##
-("entity"<|>FY23 BASE YEAR<|>TIME_PERIOD<|>Baseline year used for target tracking; metric=baseline year; value=FY23; unit=NONE; period=FY23; scope=NONE)
+("entity"<|>AUDIT & RISK OVERSIGHT COMMITTEE<|>GOVERNANCE_BODY<|>Board committee overseeing sustainability and climate-related issues, risks, and opportunities; metric=board oversight; value=AROC; unit=NONE; period=NONE; scope=sustainability and climate-related issues)
 ##
-("entity"<|>SBTI<|>FRAMEWORK<|>Science Based Targets initiative validating climate targets; metric=temperature alignment; value=1.5; unit=C; period=NONE; scope=NONE)
+("entity"<|>SUSTAINABILITY REPORTING<|>INITIATIVE<|>Sustainability reporting references GRI, SASB, and the U.N. Global Compact; metric=reporting framework; value=GRI, SASB, U.N. Global Compact; unit=NONE; period=NONE; scope=sustainability reporting)
 ##
-("relationship"<|>NVIDIA<|>FY23 BASE YEAR<|>NVIDIA defines FY23 as the baseline year for emissions targets; value=FY23; unit=NONE; period=FY23<|>8)
+("entity"<|>GRI<|>REPORTING_FRAMEWORK<|>Global Reporting Initiative framework referenced in Meta sustainability reporting; metric=reporting framework; value=GRI; unit=NONE; period=NONE; scope=sustainability reporting)
 ##
-("relationship"<|>NVIDIA<|>SBTI<|>NVIDIA states that SBTi validated its targets with 1.5C alignment; value=1.5; unit=C; period=NONE<|>7)
+("entity"<|>SASB<|>REPORTING_FRAMEWORK<|>Sustainability Accounting Standards Board framework referenced in Meta sustainability reporting; metric=reporting framework; value=SASB; unit=NONE; period=NONE; scope=sustainability reporting)
+##
+("entity"<|>U.N. GLOBAL COMPACT<|>REPORTING_FRAMEWORK<|>U.N. Global Compact referenced in Meta sustainability reporting; metric=reporting framework; value=U.N. Global Compact; unit=NONE; period=NONE; scope=sustainability reporting)
+##
+("relationship"<|>META<|>AUDIT & RISK OVERSIGHT COMMITTEE<|>Meta's Board Audit & Risk Oversight Committee oversees sustainability and climate-related issues, risks, and opportunities; value=AROC; unit=NONE; period=NONE; scope=sustainability and climate-related issues<|>10)
+##
+("relationship"<|>META<|>SUSTAINABILITY REPORTING<|>Meta's sustainability reporting references GRI, SASB, and the U.N. Global Compact; value=GRI, SASB, U.N. Global Compact; unit=NONE; period=NONE; scope=sustainability reporting<|>9)
+##
+("relationship"<|>SUSTAINABILITY REPORTING<|>GRI<|>GRI is referenced in Meta sustainability reporting; value=GRI; unit=NONE; period=NONE; scope=sustainability reporting<|>8)
+##
+("relationship"<|>SUSTAINABILITY REPORTING<|>SASB<|>SASB is referenced in Meta sustainability reporting; value=SASB; unit=NONE; period=NONE; scope=sustainability reporting<|>8)
+##
+("relationship"<|>SUSTAINABILITY REPORTING<|>U.N. GLOBAL COMPACT<|>The U.N. Global Compact is referenced in Meta sustainability reporting; value=U.N. Global Compact; unit=NONE; period=NONE; scope=sustainability reporting<|>8)
 <|COMPLETE|>
 #############################
 
 Example 2:
 
-entity_types: [company, metric, standard, time_period]
+entity_types: [company, metric, emissions_scope, time_period]
 text:
-Water withdrawal was 409,814 m3 in FY25, 382,636 m3 in FY24, and 376,656 m3 in FY23. Reference indicators include GRI 303-3 and SASB TC-SC-140a.1.
+Meta's total 2024 emissions with contractual instruments applied were 8.2 million MT CO2e. Scope 1 emissions were 47,468 MT CO2e, and Scope 3 emissions were 8,151,769 MT CO2e.
 ------------------------
 output:
-("entity"<|>WATER WITHDRAWAL<|>METRIC<|>Water withdrawal values are reported by fiscal year; metric=water withdrawal; value=409,814; unit=m3; period=FY25; scope=NONE; metric=water withdrawal; value=382,636; unit=m3; period=FY24; scope=NONE; metric=water withdrawal; value=376,656; unit=m3; period=FY23; scope=NONE)
+("entity"<|>META<|>COMPANY<|>Meta reports 2024 emissions with contractual instruments applied and Scope 1 and Scope 3 emissions; metric=total emissions with contractual instruments applied; value=8.2 million; unit=MT CO2e; period=2024; scope=contractual instruments applied; metric=Scope 1 emissions; value=47,468; unit=MT CO2e; period=2024; scope=Scope 1; metric=Scope 3 emissions; value=8,151,769; unit=MT CO2e; period=2024; scope=Scope 3)
 ##
-("entity"<|>GRI 303-3<|>STANDARD<|>Reporting indicator used for water disclosure; metric=reference indicator; value=GRI 303-3; unit=NONE; period=NONE; scope=NONE)
+("entity"<|>TOTAL EMISSIONS WITH CONTRACTUAL INSTRUMENTS APPLIED<|>METRIC<|>Meta's total 2024 emissions with contractual instruments applied; metric=total emissions with contractual instruments applied; value=8.2 million; unit=MT CO2e; period=2024; scope=contractual instruments applied)
 ##
-("entity"<|>SASB TC-SC-140A.1<|>STANDARD<|>Reporting indicator used for water disclosure; metric=reference indicator; value=SASB TC-SC-140a.1; unit=NONE; period=NONE; scope=NONE)
+("entity"<|>SCOPE 1 EMISSIONS<|>EMISSIONS_SCOPE<|>Direct emissions from company operations; metric=Scope 1 emissions; value=47,468; unit=MT CO2e; period=2024; scope=Scope 1)
 ##
-("relationship"<|>WATER WITHDRAWAL<|>GRI 303-3<|>Water withdrawal is reported under GRI 303-3 with FY25/FY24/FY23 values preserved<|>6)
+("entity"<|>SCOPE 3 EMISSIONS<|>EMISSIONS_SCOPE<|>Value chain emissions; metric=Scope 3 emissions; value=8,151,769; unit=MT CO2e; period=2024; scope=Scope 3)
 ##
-("relationship"<|>WATER WITHDRAWAL<|>SASB TC-SC-140A.1<|>Water withdrawal is reported with SASB TC-SC-140a.1 as a reference indicator<|>6)
+("entity"<|>2024<|>TIME_PERIOD<|>Reporting year for Meta emissions metrics; metric=reporting year; value=2024; unit=NONE; period=2024; scope=NONE)
+##
+("relationship"<|>META<|>TOTAL EMISSIONS WITH CONTRACTUAL INSTRUMENTS APPLIED<|>Meta's total 2024 emissions with contractual instruments applied were 8.2 million MT CO2e; value=8.2 million; unit=MT CO2e; period=2024; scope=contractual instruments applied<|>10)
+##
+("relationship"<|>META<|>SCOPE 1 EMISSIONS<|>Meta reported 2024 Scope 1 emissions of 47,468 MT CO2e; value=47,468; unit=MT CO2e; period=2024; scope=Scope 1<|>10)
+##
+("relationship"<|>META<|>SCOPE 3 EMISSIONS<|>Meta reported 2024 Scope 3 emissions of 8,151,769 MT CO2e; value=8,151,769; unit=MT CO2e; period=2024; scope=Scope 3<|>10)
+##
+("relationship"<|>TOTAL EMISSIONS WITH CONTRACTUAL INSTRUMENTS APPLIED<|>2024<|>The total emissions with contractual instruments applied value is reported for 2024; value=8.2 million; unit=MT CO2e; period=2024; scope=contractual instruments applied<|>8)
+##
+("relationship"<|>SCOPE 1 EMISSIONS<|>2024<|>The Scope 1 emissions value applies to 2024; value=47,468; unit=MT CO2e; period=2024; scope=Scope 1<|>8)
+##
+("relationship"<|>SCOPE 3 EMISSIONS<|>2024<|>The Scope 3 emissions value applies to 2024; value=8,151,769; unit=MT CO2e; period=2024; scope=Scope 3<|>8)
+<|COMPLETE|>
+#############################
+
+Example 3:
+
+entity_types: [company, metric, target, supplier_program, time_period]
+text:
+Meta's water positive goal is to become water positive in 2030 by restoring 200% of consumption in high water stress regions and 100% of consumption in medium water stress regions. By the end of 2024, 48% of suppliers, based on their contribution to emissions, had set science-aligned emissions reduction targets.
+------------------------
+output:
+("entity"<|>META<|>COMPANY<|>Meta reports a water positive goal and supplier engagement progress; metric=water restoration in high water stress regions; value=200%; unit=%; period=2030; scope=high water stress regions; metric=water restoration in medium water stress regions; value=100%; unit=%; period=2030; scope=medium water stress regions; metric=suppliers with science-aligned emissions reduction targets; value=48%; unit=%; period=end of 2024; scope=suppliers based on contribution to emissions)
+##
+("entity"<|>WATER POSITIVE GOAL<|>TARGET<|>Goal to become water positive in 2030 by restoring more water than consumed in operations; metric=water restoration in high water stress regions; value=200%; unit=%; period=2030; scope=high water stress regions; metric=water restoration in medium water stress regions; value=100%; unit=%; period=2030; scope=medium water stress regions)
+##
+("entity"<|>NET ZERO SUPPLIER ENGAGEMENT PROGRAM<|>SUPPLIER_PROGRAM<|>Supplier engagement program tracking suppliers that set science-aligned emissions reduction targets; metric=suppliers with science-aligned emissions reduction targets; value=48%; unit=%; period=end of 2024; scope=suppliers based on contribution to emissions)
+##
+("entity"<|>2030<|>TIME_PERIOD<|>Target year for Meta's water positive goal; metric=target year; value=2030; unit=NONE; period=2030; scope=NONE)
+##
+("entity"<|>END OF 2024<|>TIME_PERIOD<|>Reporting period for supplier engagement progress; metric=reporting period; value=end of 2024; unit=NONE; period=end of 2024; scope=NONE)
+##
+("relationship"<|>META<|>WATER POSITIVE GOAL<|>Meta aims to become water positive in 2030 by restoring 200% of consumption in high water stress regions and 100% of consumption in medium water stress regions; value=200%, 100%; unit=%; period=2030; scope=high water stress regions and medium water stress regions<|>10)
+##
+("relationship"<|>META<|>NET ZERO SUPPLIER ENGAGEMENT PROGRAM<|>By the end of 2024, 48% of suppliers based on their contribution to emissions had set science-aligned emissions reduction targets; value=48%; unit=%; period=end of 2024; scope=suppliers based on contribution to emissions<|>10)
+##
+("relationship"<|>WATER POSITIVE GOAL<|>2030<|>The water positive goal target year is 2030; value=2030; unit=NONE; period=2030; scope=water positive goal<|>8)
+##
+("relationship"<|>NET ZERO SUPPLIER ENGAGEMENT PROGRAM<|>END OF 2024<|>The 48% supplier engagement progress is reported by the end of 2024; value=48%; unit=%; period=end of 2024; scope=suppliers based on contribution to emissions<|>8)
+<|COMPLETE|>
+#############################
+
+Example 4:
+
+entity_types: [company, initiative, metric, time_period]
+text:
+Open Catalyst aims to discover low-cost catalysts that can drive chemical reactions needed to convert excess solar and wind energy into other fuels. Meta supports renewable energy procurement through power purchase agreements as the offtaker, and Meta diverted 91% of owned data center construction waste from disposal in 2024.
+------------------------
+output:
+("entity"<|>META<|>COMPANY<|>Meta reports Open Catalyst, renewable energy procurement through power purchase agreements, and data center construction waste diversion; metric=owned data center construction waste diverted from disposal; value=91%; unit=%; period=2024; scope=owned data center construction waste)
+##
+("entity"<|>OPEN CATALYST<|>INITIATIVE<|>AI research initiative aiming to discover low-cost catalysts for converting excess solar and wind energy into other fuels; metric=catalyst discovery; value=low-cost catalysts; unit=NONE; period=NONE; scope=solar and wind energy conversion)
+##
+("entity"<|>POWER PURCHASE AGREEMENTS<|>INITIATIVE<|>Renewable energy procurement mechanism in which Meta acts as the offtaker; metric=renewable energy procurement; value=power purchase agreements; unit=NONE; period=NONE; scope=renewable energy)
+##
+("entity"<|>OWNED DATA CENTER CONSTRUCTION WASTE DIVERSION<|>METRIC<|>Percentage of owned data center construction waste diverted from disposal; metric=owned data center construction waste diverted from disposal; value=91%; unit=%; period=2024; scope=owned data center construction waste)
+##
+("entity"<|>2024<|>TIME_PERIOD<|>Reporting year for owned data center construction waste diversion; metric=reporting year; value=2024; unit=NONE; period=2024; scope=owned data center construction waste)
+##
+("relationship"<|>META<|>OPEN CATALYST<|>Open Catalyst aims to discover low-cost catalysts for converting excess solar and wind energy into other fuels; value=low-cost catalysts; unit=NONE; period=NONE; scope=solar and wind energy conversion<|>10)
+##
+("relationship"<|>META<|>POWER PURCHASE AGREEMENTS<|>Meta supports renewable energy procurement through power purchase agreements as the offtaker; value=power purchase agreements; unit=NONE; period=NONE; scope=renewable energy procurement<|>9)
+##
+("relationship"<|>META<|>OWNED DATA CENTER CONSTRUCTION WASTE DIVERSION<|>Meta diverted 91% of owned data center construction waste from disposal in 2024; value=91%; unit=%; period=2024; scope=owned data center construction waste<|>10)
+##
+("relationship"<|>OWNED DATA CENTER CONSTRUCTION WASTE DIVERSION<|>2024<|>The owned data center construction waste diversion value applies to 2024; value=91%; unit=%; period=2024; scope=owned data center construction waste<|>8)
 <|COMPLETE|>
 #############################
 

@@ -11,7 +11,9 @@ wheels/
 data/*
 !data/eval/
 data/eval/*
-!data/eval/nvidia_gold_questions.jsonl
+!data/eval/*.jsonl
+!data/eval/company_roots.json
+data/eval/results/
 models/
 .env.example
 *.docx
